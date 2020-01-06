@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="APIVersion" label="APIVersion" language="en" table="var__m_sys_hub_step_ext_input_99bb2d93dbca045046b9fb371d96193c">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>APIVersion</element>
+            <help/>
+            <hint/>
+            <label>APIVersion</label>
+            <language>en</language>
+            <name>var__m_sys_hub_step_ext_input_99bb2d93dbca045046b9fb371d96193c</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-05 07:14:53</sys_created_on>
+            <sys_id>21bb2d93dbca045046b9fb371d961958</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>APIVersion</sys_name>
+            <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_input_99bb2d93dbca045046b9fb371d96193c_APIVersion_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-05 07:14:53</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

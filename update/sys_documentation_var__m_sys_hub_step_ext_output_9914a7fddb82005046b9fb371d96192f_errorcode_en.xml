@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="errorcode" label="ErrorCode" language="en" table="var__m_sys_hub_step_ext_output_9914a7fddb82005046b9fb371d96192f">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>errorcode</element>
+            <help/>
+            <hint/>
+            <label>ErrorCode</label>
+            <language>en</language>
+            <name>var__m_sys_hub_step_ext_output_9914a7fddb82005046b9fb371d96192f</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:09:55</sys_created_on>
+            <sys_id>a114a7fddb82005046b9fb371d96195b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>ErrorCode</sys_name>
+            <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_9914a7fddb82005046b9fb371d96192f_errorcode_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:09:55</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

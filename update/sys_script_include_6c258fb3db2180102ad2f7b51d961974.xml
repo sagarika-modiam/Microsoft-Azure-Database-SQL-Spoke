@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_microsoft_az.AzureDatabaseValidation</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>AzureDatabaseValidation</name>
+        <script><![CDATA[var AzureDatabaseValidation = Class.create();
+AzureDatabaseValidation.prototype = {
+    initialize: function() {},
+     inputValidation: function(inputs) {
+        for (var key in inputs) {
+            if (inputs[key] == null || inputs[key].toString().trim() == "") {
+                throw new Error(key + " cannot be empty");
+            }
+        }
+    },
+	
+    type: 'AzureDatabaseValidation'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-13 08:53:18</sys_created_on>
+        <sys_id>6c258fb3db2180102ad2f7b51d961974</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AzureDatabaseValidation</sys_name>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name>sys_script_include_6c258fb3db2180102ad2f7b51d961974</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-13 08:53:18</sys_updated_on>
+    </sys_script_include>
+</record_update>

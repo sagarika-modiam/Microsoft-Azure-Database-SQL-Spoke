@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="subscriptionid" label="subscriptionId" language="en" table="var__m_sys_hub_action_input_3b4c3413db6100102ad2f7b51d96190a">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>subscriptionid</element>
+            <help/>
+            <hint/>
+            <label>subscriptionId</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_3b4c3413db6100102ad2f7b51d96190a</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-12-11 07:16:23</sys_created_on>
+            <sys_id>7f4c3413db6100102ad2f7b51d96190f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>subscriptionId</sys_name>
+            <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_action_input_3b4c3413db6100102ad2f7b51d96190a_subscriptionid_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-12-11 07:16:23</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

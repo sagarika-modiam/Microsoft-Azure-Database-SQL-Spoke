@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="earliestrestoredate" label="earliestRestoreDate" language="en" table="var__m_sys_hub_step_ext_output_4cad74c9db25481046b9fb371d9619ad">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>earliestrestoredate</element>
+            <help/>
+            <hint/>
+            <label>earliestRestoreDate</label>
+            <language>en</language>
+            <name>var__m_sys_hub_step_ext_output_4cad74c9db25481046b9fb371d9619ad</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-12-04 07:35:50</sys_created_on>
+            <sys_id>14adb4c9db25481046b9fb371d961921</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>earliestRestoreDate</sys_name>
+            <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_4cad74c9db25481046b9fb371d9619ad_earliestrestoredate_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-12-04 07:35:50</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

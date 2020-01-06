@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_flow_designer_co_template">
+    <sys_hub_flow_designer_co_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <complex_definition>FDdbb12dc5fba548101077aa0aead25dae</complex_definition>
+        <sys_class_name>sys_hub_flow_designer_co_template</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-04 10:13:36</sys_created_on>
+        <sys_id>97b12dc5dba5481046b9fb371d9619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test template</sys_name>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name>sys_hub_flow_designer_co_template_97b12dc5dba5481046b9fb371d9619b0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-04 10:13:36</sys_updated_on>
+        <template_label>Test template</template_label>
+        <template_name>test_template</template_name>
+    </sys_hub_flow_designer_co_template>
+</record_update>

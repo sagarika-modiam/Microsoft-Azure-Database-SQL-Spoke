@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_snc_microsoft_az.AzureDatabaseSQLErrorHandling</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>AzureDatabaseSQLErrorHandling</name>
+        <script><![CDATA[var AzureDatabaseSQLErrorHandling = Class.create();
+AzureDatabaseSQLErrorHandling.prototype = {
+    initialize: function() {},
+
+
+    getErrorMessage: function(inputObj, respObj) {
+        if (inputObj.Status != 200) {
+            var respBody = new global.JSON().decode(inputObj['ResponseBody']);
+            respObj.errormessage = respBody.error.code;
+            //respObj.errorcode = respBody.error.code;
+            return respObj;
+        }
+    },
+    getErrorMessageUpdate: function(inputObj, respObj) {
+        if (inputObj.Status != 200 || inputObj.Status != 202) {
+            var respBody = new global.JSON().decode(inputObj['ResponseBody']);
+            respObj.errormessage = respBody.error.code;
+            //respObj.errorcode = respBody.error.code;
+            return respObj;
+        }
+    },
+    getErrorMessageCreate: function(inputObj, respObj) {
+        if (inputObj.Status != 200 || inputObj.Status != 202 || inputObj.Status != 201) {
+            var respBody = new global.JSON().decode(inputObj['ResponseBody']);
+            respObj.errormessage = respBody.error.code;
+            //respObj.errorcode = respBody.error.code;
+            return respObj;
+        }
+    },
+
+    deleteDatabase: function(inputObj, respObj) {
+        var respBody = new global.JSON().decode(inputObj['responseBody']);
+        if (inputObj.Status == 204) {
+            respObj.errormessage = 'The specified database does not exist.';
+        } else {
+            respObj.errormessage = respBody.error.code;
+            //respObj.errorcode = respBody.error.code;
+        }
+        return respObj;
+    },
+
+    type: 'AzureDatabaseSQLErrorHandling'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-09 08:24:32</sys_created_on>
+        <sys_id>ef8e5e62dbe58c1046b9fb371d961991</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>AzureDatabaseSQLErrorHandling</sys_name>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name>sys_script_include_ef8e5e62dbe58c1046b9fb371d961991</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-02 10:43:45</sys_updated_on>
+    </sys_script_include>
+</record_update>

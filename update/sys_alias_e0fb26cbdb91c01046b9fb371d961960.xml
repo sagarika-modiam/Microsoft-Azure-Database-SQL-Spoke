@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias">
+    <sys_alias action="INSERT_OR_UPDATE">
+        <connection_type>http_connection</connection_type>
+        <id>x_snc_microsoft_az.Azure_database</id>
+        <multiple_connections>false</multiple_connections>
+        <name>Azure_database</name>
+        <retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy>
+        <sys_class_name>sys_alias</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-28 10:30:49</sys_created_on>
+        <sys_id>e0fb26cbdb91c01046b9fb371d961960</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_microsoft_az.Azure_database</sys_name>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name>sys_alias_e0fb26cbdb91c01046b9fb371d961960</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-28 10:30:49</sys_updated_on>
+        <type>connection</type>
+    </sys_alias>
+</record_update>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="api_version" table="var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>api_version</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2014-01-01</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:31:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e3f8aff1dbc2005046b9fb371d961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:31:22</sys_updated_on>
+            <value>2014-01-01</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>api_version</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2014-04-01</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:31:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>63f8aff1dbc2005046b9fb371d961924</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:31:22</sys_updated_on>
+            <value>2014-04-01</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>api_version</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2014-04-01-preview</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:31:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2ff8aff1dbc2005046b9fb371d961924</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:31:22</sys_updated_on>
+            <value>2014-04-01-preview</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>api_version</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2015-09-01-preview</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:31:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e7f8aff1dbc2005046b9fb371d961925</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:31:22</sys_updated_on>
+            <value>2015-09-01-preview</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>api_version</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2015-05-01</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997</name>
+            <sequence>5</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:31:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a3f8aff1dbc2005046b9fb371d961926</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:31:22</sys_updated_on>
+            <value>2015-05-01</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>api_version</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2015-05-01-preview</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997</name>
+            <sequence>6</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:31:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6ff8aff1dbc2005046b9fb371d961926</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:31:22</sys_updated_on>
+            <value>2015-05-01-preview</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>api_version</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2017-03-01-preview</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997</name>
+            <sequence>7</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:31:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2bf8aff1dbc2005046b9fb371d961927</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:31:22</sys_updated_on>
+            <value>2017-03-01-preview</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>api_version</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2017-10-01-preview</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997</name>
+            <sequence>8</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:31:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e3f8aff1dbc2005046b9fb371d961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:31:22</sys_updated_on>
+            <value>2017-10-01-preview</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>api_version</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2018-06-01-preview</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997</name>
+            <sequence>9</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:31:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>aff8aff1dbc2005046b9fb371d961928</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:31:22</sys_updated_on>
+            <value>2018-06-01-preview</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>api_version</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>2019-06-01-preview</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997</name>
+            <sequence>10</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:31:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6bf8aff1dbc2005046b9fb371d961929</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:31:22</sys_updated_on>
+            <value>2019-06-01-preview</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>api_version</element>
+            <name>var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-01 00:31:22</sys_created_on>
+            <sys_id>2ff8aff1dbc2005046b9fb371d961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>api_version</sys_name>
+            <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+            <sys_update_name>sys_choice_var__m_sys_hub_action_input_dd9ed02fdb35081046b9fb371d961997_api_version</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-01 00:31:22</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDd55e89df616100105f0425195706cdc7</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>2b991a03db9d80102ad2f7b51d9619f8</scope_name>
+        <serialized_content>{"FlowDesigner:FDd55e89df616100105f0425195706cdc7":{},"FlowDesigner:FDd55e89df616100105f0425195706cdc7.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDd55e89df616100105f0425195706cdc7\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Event\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"8000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-11 08:35:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>995e89dfdb6100102ad2f7b51d9619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDd55e89df616100105f0425195706cdc7</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name>sys_complex_object_995e89dfdb6100102ad2f7b51d9619c7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-11 08:35:08</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>

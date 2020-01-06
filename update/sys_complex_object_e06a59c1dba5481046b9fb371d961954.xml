@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD206a59c1afa548106c5440cafa825d54</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>2b991a03db9d80102ad2f7b51d9619f8</scope_name>
+        <serialized_content>{"FlowDesigner:FD206a59c1afa548106c5440cafa825d54":{"Properties":{"Status":"String","Status.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Status\",\"mandatory\":\"true\",\"order\":\"6\",\"max_length\":\"0\"}"},"maxsizebytes":"String","maxsizebytes.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"maxsizebytes\",\"mandatory\":\"true\",\"order\":\"5\",\"max_length\":\"0\"}"}},"Properties.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Properties\",\"mandatory\":\"true\",\"order\":\"4\",\"max_length\":\"0\"}"},"Sku":{"skutier":"String","skutier.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Tier\",\"mandatory\":\"true\",\"order\":\"3\",\"max_length\":\"0\"}"},"skuname":"String","skuname.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Name\",\"mandatory\":\"true\",\"order\":\"2\",\"max_length\":\"0\"}"}},"Sku.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Sku\",\"mandatory\":\"true\",\"order\":\"1\",\"max_length\":\"0\"}"}},"FlowDesigner:FD206a59c1afa548106c5440cafa825d54.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD206a59c1afa548106c5440cafa825d54\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Database Object\",\"mandatory\":\"true\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-04 09:41:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e06a59c1dba5481046b9fb371d961954</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD206a59c1afa548106c5440cafa825d54</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name>sys_complex_object_e06a59c1dba5481046b9fb371d961954</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-04 09:41:27</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>

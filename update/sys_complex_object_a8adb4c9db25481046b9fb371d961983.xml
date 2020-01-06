@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDe4adb4c9b225481089a17d53c505a883</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>2b991a03db9d80102ad2f7b51d9619f8</scope_name>
+        <serialized_content>{"FlowDesigner:FDe4adb4c9b225481089a17d53c505a883":{"tier":"String","tier.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"tier\\\":\\\"{{step[a4439d7c-66d3-4d64-917c-1195b1e07f39].skutier}}\\\"}\",\"default_value\":\"\",\"label\":\"tier\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"name":"String","name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"},"capacity":"String","capacity.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"capacity\\\":\\\"{{step[a4439d7c-66d3-4d64-917c-1195b1e07f39].skucapacity}}\\\"}\",\"default_value\":\"\",\"label\":\"capacity\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"}},"FlowDesigner:FDe4adb4c9b225481089a17d53c505a883.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDe4adb4c9b225481089a17d53c505a883\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Sku\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-12-04 07:35:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>a8adb4c9db25481046b9fb371d961983</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDe4adb4c9b225481089a17d53c505a883</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name>sys_complex_object_a8adb4c9db25481046b9fb371d961983</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-12-04 07:35:51</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>
