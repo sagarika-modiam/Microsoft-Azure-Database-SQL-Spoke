@@ -6,10 +6,10 @@
         <active>true</active>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
-        <category/>
+        <category display_value="Database Management">e3f5ea79dbde0c5046b9fb371d9619d5</category>
         <copied_from/>
         <copied_from_name/>
-        <description>&lt;p&gt;This action  deletes a database that is existing  in server&lt;/p&gt;
+        <description>&lt;p&gt;Delete a database from a server&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Inputs:&lt;/b&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;b&gt;Subscription Id&lt;/b&gt; - Subscription ID that identifies an Azure Subscription.&lt;/li&gt;
@@ -21,11 +21,18 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;b&gt;Status&lt;/b&gt; - Will be set to "Success" if the request succeeds or "Error" if a failure occurs.&lt;/li&gt;
   &lt;li&gt;&lt;b&gt;Error Message&lt;/b&gt; - Will be populated when the status is "Error".&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;b&gt;Error Messages:&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The specified database does not exist.&lt;/li&gt;
+&lt;li&gt; Cannot drop database because it may be a sync metadata database or associated with job account or reserved database.&lt;/li&gt;
+&lt;li&gt; Subscription ID or Resource Group or Server or Database entered is invalid.&lt;/li&gt;
+&lt;li&gt;Operation disabled or cancelled.&lt;/li&gt;
 &lt;/ul&gt;</description>
         <ih_action>true</ih_action>
         <internal_name>delete</internal_name>
         <label_cache>[{"name":"{{action.subscriptionid}}","label":"action➛Subscription ID","type":"action","ref":""},{"name":"{{action.resourcegroupname}}","label":"action➛Resource Group Name","type":"action","ref":""},{"name":"{{action.servername}}","label":"action➛Server Name","type":"action","ref":""},{"name":"{{action.databasename}}","label":"action➛Database Name","type":"action","ref":""},{"name":"{{step[f0fe7cff-782c-458e-a42f-f5103c93985e].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[726a7ab9-41c9-4f10-a80f-de245c351b6e].status}}","label":"step➛Error Handling➛Status","type":"step","ref":""},{"name":"{{step[726a7ab9-41c9-4f10-a80f-de245c351b6e].errormessage}}","label":"step➛Error Handling➛ErrorMessage","type":"step","ref":""},{"name":"{{step[f0fe7cff-782c-458e-a42f-f5103c93985e].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>24b5615fdb8a045046b9fb371d9619e6</latest_snapshot>
+        <latest_snapshot>82f1a60cdbe2049046b9fb371d961953</latest_snapshot>
         <master_snapshot>9981a619db468c1046b9fb371d96191a</master_snapshot>
         <name>Delete Database</name>
         <outputs/>
@@ -36,7 +43,7 @@
         <sys_created_on>2019-11-28 10:07:34</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>74d622cbdb9d80102ad2f7b51d961943</sys_id>
-        <sys_mod_count>73</sys_mod_count>
+        <sys_mod_count>98</sys_mod_count>
         <sys_name>Delete Database</sys_name>
         <sys_overrides/>
         <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
@@ -44,7 +51,7 @@
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_74d622cbdb9d80102ad2f7b51d961943</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 06:48:40</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:23:08</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -1039,14 +1046,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-02 10:18:54</sys_created_on>
         <sys_id>a9cf0f90db65c41046b9fb371d9619d0</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 07:24:35</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a9cf0f90db65c41046b9fb371d9619d0"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1122,15 +1129,29 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>a9cf0f90db65c41046b9fb371d9619d0</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:22:51</sys_created_on>
+        <sys_id>bae1260cdbe2049046b9fb371d96193e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
+        <value>e0fb26cbdb91c01046b9fb371d961960</value>
+        <variable display_value="">445c2a72b3701300176b051a16a8dcc2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>a9cf0f90db65c41046b9fb371d9619d0</document_key>
         <order>25</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-02 10:19:36</sys_created_on>
         <sys_id>bfefcf90db65c41046b9fb371d96194f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-02 10:19:36</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[]}</value>
+        <sys_updated_on>2020-01-09 06:25:06</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"api-version","value":"2017-10-01-preview"}]}</value>
         <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1141,11 +1162,25 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-02 10:18:54</sys_created_on>
         <sys_id>e5cf0f90db65c41046b9fb371d9619e6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
+        <value/>
+        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>a9cf0f90db65c41046b9fb371d9619d0</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:22:51</sys_created_on>
+        <sys_id>f6e1260cdbe2049046b9fb371d96193e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-02 10:18:54</sys_updated_on>
-        <value>e0fb26cbdb91c01046b9fb371d961960</value>
-        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">91e207d03b50030057a4a2e334efc4a0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -1199,6 +1234,18 @@
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>a9cf0f90db65c41046b9fb371d9619d0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:22:51</sys_created_on>
+        <sys_id>fee1260cdbe2049046b9fb371d96193d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>connection_alias</field>
         <id>a9cf0f90db65c41046b9fb371d9619d0</id>
         <sys_created_by>admin</sys_created_by>
@@ -1207,6 +1254,18 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2019-12-02 10:18:54</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>a9cf0f90db65c41046b9fb371d9619d0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:22:51</sys_created_on>
+        <sys_id>b2e1260cdbe2049046b9fb371d96193e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value/>
     </sys_element_mapping>
@@ -1252,11 +1311,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-02 10:18:54</sys_created_on>
         <sys_id>edcf0f90db65c41046b9fb371d9619e4</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 07:24:35</sys_updated_on>
+        <sys_updated_on>2020-01-09 06:25:06</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>/subscriptions/{{action.subscriptionid}}/resourceGroups/{{action.resourcegroupname}}/providers/Microsoft.Sql/servers/{{action.servername}}/databases/{{action.databasename}}?api-version=2017-10-01-preview</value>
+        <value>/subscriptions/{{action.subscriptionid}}/resourceGroups/{{action.resourcegroupname}}/providers/Microsoft.Sql/servers/{{action.servername}}/databases/{{action.databasename}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>retry_policy</field>
@@ -1333,14 +1392,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-02 10:18:54</sys_created_on>
         <sys_id>adcf0f90db65c41046b9fb371d9619d8</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-02 10:19:35</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:23:00</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1438,13 +1497,13 @@
     <sys_hub_action_input_action_instance action="INSERT_OR_UPDATE">
         <action_input display_value="">11adf353dbf1081046b9fb371d9619db</action_input>
         <action_inputs/>
-        <action_type display_value="Get Servers - Dynamic">aa7f9e55db468c1046b9fb371d961980</action_type>
+        <action_type display_value="Get SQL Servers - Dynamic">aa7f9e55db468c1046b9fb371d961980</action_type>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-24 07:36:47</sys_created_on>
         <sys_id>d9adf353dbf1081046b9fb371d9619df</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 06:48:31</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:22:59</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d9adf353dbf1081046b9fb371d9619df"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1592,9 +1651,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-24 07:36:47</sys_created_on>
         <sys_id>1dad3753dbf1081046b9fb371d961914</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 06:48:31</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:22:59</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=1dad3753dbf1081046b9fb371d961914"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1851,9 +1910,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-24 07:36:46</sys_created_on>
         <sys_id>95adf353dbf1081046b9fb371d9619d0</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 06:48:31</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:22:59</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=95adf353dbf1081046b9fb371d9619d0"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3003,14 +3062,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-02 10:18:54</sys_created_on>
         <sys_id>a9cf0f90db65c41046b9fb371d9619d0</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 07:24:35</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a9cf0f90db65c41046b9fb371d9619d0"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3086,15 +3145,29 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>a9cf0f90db65c41046b9fb371d9619d0</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:22:51</sys_created_on>
+        <sys_id>bae1260cdbe2049046b9fb371d96193e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
+        <value>e0fb26cbdb91c01046b9fb371d961960</value>
+        <variable display_value="">445c2a72b3701300176b051a16a8dcc2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>a9cf0f90db65c41046b9fb371d9619d0</document_key>
         <order>25</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-02 10:19:36</sys_created_on>
         <sys_id>bfefcf90db65c41046b9fb371d96194f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-02 10:19:36</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[]}</value>
+        <sys_updated_on>2020-01-09 06:25:06</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"api-version","value":"2017-10-01-preview"}]}</value>
         <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3105,11 +3178,25 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-02 10:18:54</sys_created_on>
         <sys_id>e5cf0f90db65c41046b9fb371d9619e6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
+        <value/>
+        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>a9cf0f90db65c41046b9fb371d9619d0</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:22:51</sys_created_on>
+        <sys_id>f6e1260cdbe2049046b9fb371d96193e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-02 10:18:54</sys_updated_on>
-        <value>e0fb26cbdb91c01046b9fb371d961960</value>
-        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">91e207d03b50030057a4a2e334efc4a0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -3163,6 +3250,18 @@
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>a9cf0f90db65c41046b9fb371d9619d0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:22:51</sys_created_on>
+        <sys_id>fee1260cdbe2049046b9fb371d96193d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>connection_alias</field>
         <id>a9cf0f90db65c41046b9fb371d9619d0</id>
         <sys_created_by>admin</sys_created_by>
@@ -3171,6 +3270,18 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2019-12-02 10:18:54</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>a9cf0f90db65c41046b9fb371d9619d0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:22:51</sys_created_on>
+        <sys_id>b2e1260cdbe2049046b9fb371d96193e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:22:51</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value/>
     </sys_element_mapping>
@@ -3216,11 +3327,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-02 10:18:54</sys_created_on>
         <sys_id>edcf0f90db65c41046b9fb371d9619e4</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 07:24:35</sys_updated_on>
+        <sys_updated_on>2020-01-09 06:25:06</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>/subscriptions/{{action.subscriptionid}}/resourceGroups/{{action.resourcegroupname}}/providers/Microsoft.Sql/servers/{{action.servername}}/databases/{{action.databasename}}?api-version=2017-10-01-preview</value>
+        <value>/subscriptions/{{action.subscriptionid}}/resourceGroups/{{action.resourcegroupname}}/providers/Microsoft.Sql/servers/{{action.servername}}/databases/{{action.databasename}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>retry_policy</field>
@@ -3297,14 +3408,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-02 10:18:54</sys_created_on>
         <sys_id>adcf0f90db65c41046b9fb371d9619d8</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-02 10:19:35</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:23:00</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3501,13 +3612,13 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Delete Database">74d622cbdb9d80102ad2f7b51d961943</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"cb81e619db468c1046b9fb371d9619a6","name":"plan"}}</plan>
-        <snapshot>24b5615fdb8a045046b9fb371d9619e6</snapshot>
+        <snapshot>c2962ab9dbde0c5046b9fb371d9619a4</snapshot>
         <sys_class_name>sys_hub_action_plan</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:15</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>cb81e619db468c1046b9fb371d9619a6</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -3515,7 +3626,7 @@
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 06:48:43</sys_updated_on>
+        <sys_updated_on>2020-01-13 05:57:04</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -3523,10 +3634,10 @@
         <action_template/>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
-        <category/>
+        <category display_value="Database Management">e3f5ea79dbde0c5046b9fb371d9619d5</category>
         <copied_from/>
         <copied_from_name/>
-        <description>&lt;p&gt;This action  deletes a database that is existing  in server&lt;/p&gt;
+        <description>&lt;p&gt;Delete a database from a server&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Inputs:&lt;/b&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;b&gt;Subscription Id&lt;/b&gt; - Subscription ID that identifies an Azure Subscription.&lt;/li&gt;
@@ -3538,6 +3649,13 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;b&gt;Status&lt;/b&gt; - Will be set to "Success" if the request succeeds or "Error" if a failure occurs.&lt;/li&gt;
   &lt;li&gt;&lt;b&gt;Error Message&lt;/b&gt; - Will be populated when the status is "Error".&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;b&gt;Error Messages:&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The specified database does not exist.&lt;/li&gt;
+&lt;li&gt; Cannot drop database because it may be a sync metadata database or associated with job account or reserved database.&lt;/li&gt;
+&lt;li&gt; Subscription ID or Resource Group or Server or Database entered is invalid.&lt;/li&gt;
+&lt;li&gt;Operation disabled or cancelled.&lt;/li&gt;
 &lt;/ul&gt;</description>
         <internal_name>delete_database</internal_name>
         <label_cache>[{"name":"{{action.subscriptionid}}","label":"action➛Subscription ID","type":"action","ref":""},{"name":"{{action.resourcegroupname}}","label":"action➛Resource Group Name","type":"action","ref":""},{"name":"{{action.servername}}","label":"action➛Server Name","type":"action","ref":""},{"name":"{{action.databasename}}","label":"action➛Database Name","type":"action","ref":""},{"name":"{{step[f0fe7cff-782c-458e-a42f-f5103c93985e].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[726a7ab9-41c9-4f10-a80f-de245c351b6e].status}}","label":"step➛Error Handling➛Status","type":"step","ref":""},{"name":"{{step[726a7ab9-41c9-4f10-a80f-de245c351b6e].errormessage}}","label":"step➛Error Handling➛ErrorMessage","type":"step","ref":""},{"name":"{{step[f0fe7cff-782c-458e-a42f-f5103c93985e].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""}]</label_cache>
@@ -3551,7 +3669,7 @@
         <sys_created_on>2019-12-30 06:02:08</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>9981a619db468c1046b9fb371d96191a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -3559,7 +3677,7 @@
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 06:48:39</sys_updated_on>
+        <sys_updated_on>2020-01-13 05:56:59</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -3608,14 +3726,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:09</sys_created_on>
         <sys_id>7581a619db468c1046b9fb371d96195d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 07:26:03</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7581a619db468c1046b9fb371d96195d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3631,6 +3749,20 @@
         <sys_updated_on>2019-12-30 06:02:09</sys_updated_on>
         <value>ef751ff07301330025d71afe2ff6a7f9</value>
         <variable display_value="">37be397587c03300a8cc7d5e27cb0ba2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7581a619db468c1046b9fb371d96195d</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:23:07</sys_created_on>
+        <sys_id>32f1e60cdbe2049046b9fb371d961935</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">91e207d03b50030057a4a2e334efc4a0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -3654,10 +3786,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:09</sys_created_on>
         <sys_id>7581a619db468c1046b9fb371d96197c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-30 06:02:09</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[]}</value>
+        <sys_updated_on>2020-01-09 06:25:27</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"api-version","value":"2017-10-01-preview"}]}</value>
         <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3696,10 +3828,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:09</sys_created_on>
         <sys_id>b581a619db468c1046b9fb371d96197b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-30 06:02:09</sys_updated_on>
-        <value>e0fb26cbdb91c01046b9fb371d961960</value>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
+        <value/>
         <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3715,6 +3847,20 @@
         <sys_updated_on>2019-12-30 06:02:09</sys_updated_on>
         <value>delete</value>
         <variable display_value="">e85b7ebf47222200b4fad7527c9a71e3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7581a619db468c1046b9fb371d96195d</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:23:07</sys_created_on>
+        <sys_id>f2f1e60cdbe2049046b9fb371d961935</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
+        <value>e0fb26cbdb91c01046b9fb371d961960</value>
+        <variable display_value="">445c2a72b3701300176b051a16a8dcc2</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -3768,6 +3914,18 @@
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>7581a619db468c1046b9fb371d96195d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:23:07</sys_created_on>
+        <sys_id>3af1e60cdbe2049046b9fb371d961934</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>connection_alias</field>
         <id>7581a619db468c1046b9fb371d96195d</id>
         <sys_created_by>admin</sys_created_by>
@@ -3776,6 +3934,18 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2019-12-30 06:02:09</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>7581a619db468c1046b9fb371d96195d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:23:07</sys_created_on>
+        <sys_id>faf1e60cdbe2049046b9fb371d961934</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value/>
     </sys_element_mapping>
@@ -3821,11 +3991,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:09</sys_created_on>
         <sys_id>fd81a619db468c1046b9fb371d961979</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 07:26:03</sys_updated_on>
+        <sys_updated_on>2020-01-09 06:25:27</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>/subscriptions/{{action.subscriptionid}}/resourceGroups/{{action.resourcegroupname}}/providers/Microsoft.Sql/servers/{{action.servername}}/databases/{{action.databasename}}?api-version=2017-10-01-preview</value>
+        <value>/subscriptions/{{action.subscriptionid}}/resourceGroups/{{action.resourcegroupname}}/providers/Microsoft.Sql/servers/{{action.servername}}/databases/{{action.databasename}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>retry_policy</field>
@@ -4917,13 +5087,13 @@
     <sys_hub_action_input_action_instance action="INSERT_OR_UPDATE">
         <action_input display_value="">2181a619db468c1046b9fb371d961926</action_input>
         <action_inputs/>
-        <action_type display_value="Get Servers - Dynamic">aa7f9e55db468c1046b9fb371d961980</action_type>
+        <action_type display_value="Get SQL Servers - Dynamic">aa7f9e55db468c1046b9fb371d961980</action_type>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:08</sys_created_on>
         <sys_id>a981a619db468c1046b9fb371d96192a</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 06:48:39</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a981a619db468c1046b9fb371d96192a"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5124,9 +5294,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:08</sys_created_on>
         <sys_id>e981a619db468c1046b9fb371d961930</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 06:48:39</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e981a619db468c1046b9fb371d961930"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5260,9 +5430,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:08</sys_created_on>
         <sys_id>2181a619db468c1046b9fb371d961925</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 06:48:39</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2181a619db468c1046b9fb371d961925"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5464,14 +5634,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:09</sys_created_on>
         <sys_id>7581a619db468c1046b9fb371d96195d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 07:26:03</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7581a619db468c1046b9fb371d96195d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5487,6 +5657,20 @@
         <sys_updated_on>2019-12-30 06:02:09</sys_updated_on>
         <value>ef751ff07301330025d71afe2ff6a7f9</value>
         <variable display_value="">37be397587c03300a8cc7d5e27cb0ba2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7581a619db468c1046b9fb371d96195d</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:23:07</sys_created_on>
+        <sys_id>32f1e60cdbe2049046b9fb371d961935</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">91e207d03b50030057a4a2e334efc4a0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -5510,10 +5694,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:09</sys_created_on>
         <sys_id>7581a619db468c1046b9fb371d96197c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-30 06:02:09</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[]}</value>
+        <sys_updated_on>2020-01-09 06:25:27</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"api-version","value":"2017-10-01-preview"}]}</value>
         <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5552,10 +5736,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:09</sys_created_on>
         <sys_id>b581a619db468c1046b9fb371d96197b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-30 06:02:09</sys_updated_on>
-        <value>e0fb26cbdb91c01046b9fb371d961960</value>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
+        <value/>
         <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5571,6 +5755,20 @@
         <sys_updated_on>2019-12-30 06:02:09</sys_updated_on>
         <value>delete</value>
         <variable display_value="">e85b7ebf47222200b4fad7527c9a71e3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7581a619db468c1046b9fb371d96195d</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:23:07</sys_created_on>
+        <sys_id>f2f1e60cdbe2049046b9fb371d961935</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
+        <value>e0fb26cbdb91c01046b9fb371d961960</value>
+        <variable display_value="">445c2a72b3701300176b051a16a8dcc2</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -5624,6 +5822,18 @@
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>7581a619db468c1046b9fb371d96195d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:23:07</sys_created_on>
+        <sys_id>3af1e60cdbe2049046b9fb371d961934</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>connection_alias</field>
         <id>7581a619db468c1046b9fb371d96195d</id>
         <sys_created_by>admin</sys_created_by>
@@ -5632,6 +5842,18 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2019-12-30 06:02:09</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>7581a619db468c1046b9fb371d96195d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:23:07</sys_created_on>
+        <sys_id>faf1e60cdbe2049046b9fb371d961934</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:23:07</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value/>
     </sys_element_mapping>
@@ -5677,11 +5899,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-30 06:02:09</sys_created_on>
         <sys_id>fd81a619db468c1046b9fb371d961979</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 07:26:03</sys_updated_on>
+        <sys_updated_on>2020-01-09 06:25:27</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>/subscriptions/{{action.subscriptionid}}/resourceGroups/{{action.resourcegroupname}}/providers/Microsoft.Sql/servers/{{action.servername}}/databases/{{action.databasename}}?api-version=2017-10-01-preview</value>
+        <value>/subscriptions/{{action.subscriptionid}}/resourceGroups/{{action.resourcegroupname}}/providers/Microsoft.Sql/servers/{{action.servername}}/databases/{{action.databasename}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>retry_policy</field>

@@ -1,4 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="DELETE" field="variable" table="var__m_sys_hub_action_output_8f642ad9db468c1046b9fb371d961939" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>variable</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Success</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_output_8f642ad9db468c1046b9fb371d961939</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-12-30 06:14:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>37642ad9db468c1046b9fb371d9619cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-12-30 06:14:51</sys_updated_on>
+            <value>Success</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>variable</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Error</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_output_8f642ad9db468c1046b9fb371d961939</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-12-30 06:14:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b3642ad9db468c1046b9fb371d9619d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-12-30 06:14:51</sys_updated_on>
+            <value>Error</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>variable</element>
+            <name>var__m_sys_hub_action_output_8f642ad9db468c1046b9fb371d961939</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-12-30 06:14:51</sys_created_on>
+            <sys_id>7f642ad9db468c1046b9fb371d9619cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>variable</sys_name>
+            <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+            <sys_update_name>sys_choice_var__m_sys_hub_action_output_8f642ad9db468c1046b9fb371d961939_variable</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-12-30 06:14:51</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</application>
+        <file_path/>
+        <instance_id>b04f9345db510090b847ac44d496193e</instance_id>
+        <instance_name>empsagarika</instance_name>
+        <name>sys_choice_var__m_sys_hub_action_output_8f642ad9db468c1046b9fb371d961939_variable</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_choice action="INSERT_OR_UPDATE" field="variable" table="var__m_sys_hub_action_output_8f642ad9db468c1046b9fb371d961939" version="3">
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -55,4 +119,42 @@
             <sys_updated_on>2019-12-30 06:14:51</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
+</record_update>]]></payload>
+        <payload_hash>997858168</payload_hash>
+        <record_name>.Status</record_name>
+        <reverted_from/>
+        <source>cf39b6c8dbe6049046b9fb371d9619f0</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 07:04:51</sys_created_on>
+        <sys_id>bc493ac8dbe6049046b9fb371d9619cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16fc1c4b2d40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 07:04:51</sys_updated_on>
+        <type>Choice list</type>
+        <update_guid>3c493ac830e60490e86e3b285a16a6cb</update_guid>
+        <update_guid_history>3c493ac830e60490e86e3b285a16a6cb:0,d1b13ecc7e66049072ce2235d4638472:-1939418138,99b13ecc55660490325a646ff813fb6f:434882646,1db13ecc656604900969acc7bb4acf6d:989170914</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 07:11:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_choice_set">sys_choice_set</sys_db_object>
+        <sys_id>30493ac8dbe6049046b9fb371d9619ca</sys_id>
+        <sys_metadata>30493ac8dbe6049046b9fb371d9619ca</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>variable</sys_name>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_scope_delete display_value="">38ba6f573dbd4f2c9d9ce098580fce10</sys_scope_delete>
+        <sys_update_name>sys_choice_var__m_sys_hub_action_output_8f642ad9db468c1046b9fb371d961939_variable</sys_update_name>
+        <sys_update_version display_value="sys_choice_var__m_sys_hub_action_output_8f642ad9db468c1046b9fb371d961939_variable">bc493ac8dbe6049046b9fb371d9619cb</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 07:11:45</sys_updated_on>
+    </sys_metadata_delete>
 </record_update>

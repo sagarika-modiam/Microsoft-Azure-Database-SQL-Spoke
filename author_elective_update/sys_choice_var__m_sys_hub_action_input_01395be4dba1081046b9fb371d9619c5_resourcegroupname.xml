@@ -1,4 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="DELETE" field="resourcegroupname" table="var__m_sys_hub_action_input_01395be4dba1081046b9fb371d9619c5" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>resourcegroupname</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>resource1</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_01395be4dba1081046b9fb371d9619c5</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-02 03:52:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>28b06952db86405046b9fb371d961974</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-02 03:52:49</sys_updated_on>
+            <value>resource1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>resourcegroupname</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>resource2</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_01395be4dba1081046b9fb371d9619c5</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-02 03:52:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>68b06952db86405046b9fb371d961975</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-02 03:52:49</sys_updated_on>
+            <value>resource2</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>resourcegroupname</element>
+            <name>var__m_sys_hub_action_input_01395be4dba1081046b9fb371d9619c5</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-02 03:52:49</sys_created_on>
+            <sys_id>60b06952db86405046b9fb371d961975</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>resourcegroupname</sys_name>
+            <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+            <sys_update_name>sys_choice_var__m_sys_hub_action_input_01395be4dba1081046b9fb371d9619c5_resourcegroupname</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-02 03:52:49</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</application>
+        <file_path/>
+        <instance_id>b04f9345db510090b847ac44d496193e</instance_id>
+        <instance_name>empsagarika</instance_name>
+        <name>sys_choice_var__m_sys_hub_action_input_01395be4dba1081046b9fb371d9619c5_resourcegroupname</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_choice action="INSERT_OR_UPDATE" field="resourcegroupname" table="var__m_sys_hub_action_input_01395be4dba1081046b9fb371d9619c5" version="3">
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -55,4 +119,42 @@
             <sys_updated_on>2020-01-02 03:52:49</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
+</record_update>]]></payload>
+        <payload_hash>-2113887900</payload_hash>
+        <record_name>.Resource Group Name</record_name>
+        <reverted_from/>
+        <source/>
+        <source_table>sys_upgrade_history</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 07:04:44</sys_created_on>
+        <sys_id>8339b6c8dbe6049046b9fb371d9619f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16fc1c498bb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 07:04:44</sys_updated_on>
+        <type>Choice list</type>
+        <update_guid>4339b6c864e60490385b9609c3e2d5f0</update_guid>
+        <update_guid_history>0120fe48a8660490c596e3a9a8743092:1181580058,c520fe485f660490cb5e21940b1f708f:-1405575270,4920fe48b16604906eca7cbda11d1c8d:-271671584</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 07:11:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_choice_set">sys_choice_set</sys_db_object>
+        <sys_id>8739b6c8dbe6049046b9fb371d9619ee</sys_id>
+        <sys_metadata>8739b6c8dbe6049046b9fb371d9619ee</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>resourcegroupname</sys_name>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_scope_delete display_value="">38ba6f573dbd4f2c9d9ce098580fce10</sys_scope_delete>
+        <sys_update_name>sys_choice_var__m_sys_hub_action_input_01395be4dba1081046b9fb371d9619c5_resourcegroupname</sys_update_name>
+        <sys_update_version display_value="sys_choice_var__m_sys_hub_action_input_01395be4dba1081046b9fb371d9619c5_resourcegroupname">8339b6c8dbe6049046b9fb371d9619f0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 07:11:38</sys_updated_on>
+    </sys_metadata_delete>
 </record_update>

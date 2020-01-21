@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>get_properties__template</internal_name>
         <label_cache>[{"name":"{{step[ad069af9-2aad-4982-b432-5033f7163dc1].resources}}","label":"step➛Script step➛Resources","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>a58836a6db0a805046b9fb371d96199f</latest_snapshot>
+        <latest_snapshot>ed7dab88dbaa049046b9fb371d96194a</latest_snapshot>
         <master_snapshot>4ad39703db35c41046b9fb371d9619ab</master_snapshot>
         <name>Get Properties - Template</name>
         <outputs/>
@@ -725,7 +725,7 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Get Properties - Template">6231d38fdbf1c41046b9fb371d9619d1</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"d6d39703db35c41046b9fb371d9619f2","name":"plan"}}</plan>
-        <snapshot>a58836a6db0a805046b9fb371d96199f</snapshot>
+        <snapshot>ed7dab88dbaa049046b9fb371d96194a</snapshot>
         <sys_class_name>sys_hub_action_plan</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-23 09:55:41</sys_created_on>

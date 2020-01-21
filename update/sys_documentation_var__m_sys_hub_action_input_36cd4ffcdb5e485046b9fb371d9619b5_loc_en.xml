@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="loc" label="Location" language="en" table="var__m_sys_hub_action_input_36cd4ffcdb5e485046b9fb371d9619b5">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>loc</element>
+            <help/>
+            <hint>Location of Database</hint>
+            <label>Location</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_36cd4ffcdb5e485046b9fb371d9619b5</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-01-10 06:20:41</sys_created_on>
+            <sys_id>904f43b0db9e485046b9fb371d9619ba</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>Location</sys_name>
+            <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_action_input_36cd4ffcdb5e485046b9fb371d9619b5_loc_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-01-20 06:00:57</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

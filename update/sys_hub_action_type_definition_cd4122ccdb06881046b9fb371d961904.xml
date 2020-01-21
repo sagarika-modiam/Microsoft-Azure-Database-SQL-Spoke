@@ -13,7 +13,7 @@
         <ih_action>false</ih_action>
         <internal_name>sku_template__dynamic</internal_name>
         <label_cache>[{"name":"{{step[f0077f5e-0ef0-4ea1-bf24-20bd80e8391b].resources}}","label":"step➛Script step➛Resources","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>323ce2dadb8a405046b9fb371d96199e</latest_snapshot>
+        <latest_snapshot>097d6b88dbaa049046b9fb371d9619f3</latest_snapshot>
         <master_snapshot>26e2aa00db46881046b9fb371d9619e1</master_snapshot>
         <name>Get Sku - Template</name>
         <outputs/>
@@ -491,7 +491,7 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Get Sku - Template">cd4122ccdb06881046b9fb371d961904</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"8be2ea00db46881046b9fb371d96191b","name":"plan"}}</plan>
-        <snapshot>323ce2dadb8a405046b9fb371d96199e</snapshot>
+        <snapshot>097d6b88dbaa049046b9fb371d9619f3</snapshot>
         <sys_class_name>sys_hub_action_plan</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-26 08:55:51</sys_created_on>

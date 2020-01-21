@@ -9,7 +9,7 @@
         <category display_value="Create Database">37ef529edb4a405046b9fb371d961941</category>
         <copied_from>cf04ebbbdb6180102ad2f7b51d961985</copied_from>
         <copied_from_name>Update Database</copied_from_name>
-        <description>&lt;p&gt;This action creates a Generic Database in Microsoft Azure SQL which don't have specifications like VCore or Hyperscale.&lt;/p&gt;
+        <description>&lt;p&gt;Create a Generic Database in Microsoft Azure.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Inputs:&lt;/b&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;b&gt;Subscription Id&lt;/b&gt; - Subscription ID that identifies an Azure Subscription.&lt;/li&gt;
@@ -17,7 +17,7 @@
 &lt;li&gt;&lt;b&gt;Server Name &lt;/b&gt; - Name of the Server.&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;Database Name&lt;/b&gt; - Name of the Database to be created.&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;Location&lt;/b&gt; - Name of Database Location.&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;Sku&lt;/b&gt; - Sku Properties to create Database.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;SKU&lt;/b&gt; - SKU Properties to create Database.&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;Properties&lt;/b&gt; - Properties to create Database.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;b&gt;Outputs:&lt;/b&gt;&lt;/p&gt;
@@ -25,22 +25,27 @@
   &lt;li&gt;&lt;b&gt;Status&lt;/b&gt; - Will be set to "Success" if the request succeeds or "Error" if a failure occurs.&lt;/li&gt;
   &lt;li&gt;&lt;b&gt;Error Message&lt;/b&gt; - Will be populated when the status is "Error".&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;b&gt;Error Messages:&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt; Either Subscription ID or Resource Group or Server or Database or API Version entered is invalid or not found.&lt;/li&gt;
+&lt;li&gt; Either mismatch between properties or property values entered are invalid.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
-        <ih_action>false</ih_action>
+        <ih_action>true</ih_action>
         <internal_name>create_database__generic</internal_name>
-        <label_cache>[{"name":"{{action.subscription_id1}}","label":"action➛Subscription ID","type":"action","ref":""},{"name":"{{action.resource_groupname}}","label":"action➛Resource GroupName","type":"action","ref":""},{"name":"{{action.server_name}}","label":"action➛Server Name","type":"action","ref":""},{"name":"{{action.database_name}}","label":"action➛Database Name","type":"action","ref":""},{"name":"{{action.location}}","label":"action➛Location","type":"action","ref":""},{"name":"{{action.properties}}","label":"action➛Properties","type":"action","ref":""},{"name":"{{action.sku}}","label":"action➛Sku","type":"action","ref":""},{"name":"{{step[78540522-da38-4d99-95d4-edb9817e46f1].sku}}","label":"step➛Pay Load Script➛sku","type":"step","ref":""},{"name":"{{step[d4bbf0be-9058-4b1a-b6e6-24265f0cea98].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[d4bbf0be-9058-4b1a-b6e6-24265f0cea98].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].status}}","label":"step➛Post Validation➛Status","type":"step","ref":""},{"name":"{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].errormessage}}","label":"step➛Post Validation➛ErrorMessage","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>d88695dfdb4a045046b9fb371d961952</latest_snapshot>
+        <label_cache>[{"name":"{{action.resource_groupname}}","label":"action➛Resource GroupName","type":"action","ref":""},{"name":"{{action.server_name}}","label":"action➛Server Name","type":"action","ref":""},{"name":"{{action.database_name}}","label":"action➛Database Name","type":"action","ref":""},{"name":"{{action.location}}","label":"action➛Location","type":"action","ref":""},{"name":"{{action.properties}}","label":"action➛Properties","type":"action","ref":""},{"name":"{{action.sku}}","label":"action➛SKU","type":"action","ref":""},{"name":"{{action.subscription_id}}","label":"action➛Subscription ID","type":"action","ref":""},{"name":"{{step[78540522-da38-4d99-95d4-edb9817e46f1].sku}}","label":"step➛Pay Load Script➛sku","type":"step","ref":""},{"name":"{{step[d4bbf0be-9058-4b1a-b6e6-24265f0cea98].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[d4bbf0be-9058-4b1a-b6e6-24265f0cea98].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].status}}","label":"step➛Post Validation➛Status","type":"step","ref":""},{"name":"{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].errormessage}}","label":"step➛Post Validation➛ErrorMessage","type":"step","ref":""},{"name":"{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].operationalstatus}}","label":"step➛Post Validation➛OperationalStatus","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>764df3d4db2a449046b9fb371d961938</latest_snapshot>
         <master_snapshot>3d6ba29adb8a405046b9fb371d96194c</master_snapshot>
         <name>Create Database - Generic</name>
         <outputs/>
         <outputs/>
-        <state>draft</state>
+        <state>published</state>
         <sys_class_name>sys_hub_action_type_definition</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:38</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>c9e92a1adb8a405046b9fb371d9619fc</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>97</sys_mod_count>
         <sys_name>Create Database - Generic</sys_name>
         <sys_overrides/>
         <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
@@ -48,7 +53,7 @@
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_c9e92a1adb8a405046b9fb371d9619fc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 07:40:15</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:40</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -66,6 +71,18 @@
         <sys_updated_on>2020-01-02 09:12:42</sys_updated_on>
         <table>var__m_sys_hub_action_output_c9e92a1adb8a405046b9fb371d9619fc</table>
         <value>{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].errormessage}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>operational_status</field>
+        <id>c9e92a1adb8a405046b9fb371d9619fc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:37:25</sys_created_on>
+        <sys_id>cc456e00db26049046b9fb371d96191b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:37:25</sys_updated_on>
+        <table>var__m_sys_hub_action_output_c9e92a1adb8a405046b9fb371d9619fc</table>
+        <value>{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].operationalstatus}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>status</field>
@@ -97,14 +114,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:39</sys_created_on>
         <sys_id>6de96a1adb8a405046b9fb371d961944</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:40</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:27:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6de96a1adb8a405046b9fb371d961944"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -217,11 +234,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:40</sys_created_on>
         <sys_id>31e96a1adb8a405046b9fb371d961967</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:40</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:27:45</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_6de96a1adb8a405046b9fb371d961944</table>
-        <value>{{action.subscription_id1}}</value>
+        <value>{{action.subscription_id}}</value>
     </sys_element_mapping>
     <sys_hub_step_ext_input action="delete_multiple" query="model=6de96a1adb8a405046b9fb371d961944^sys_idNOT IN29e96a1adb8a405046b9fb371d961957,69e96a1adb8a405046b9fb371d96195c,a5e96a1adb8a405046b9fb371d96194d,e5e96a1adb8a405046b9fb371d961952,e9e96a1adb8a405046b9fb371d961947"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
@@ -646,14 +663,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>71e96a1adb8a405046b9fb371d961988</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:18:49</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=71e96a1adb8a405046b9fb371d961988"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -692,10 +709,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>79e96a1adb8a405046b9fb371d96199b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[]}</value>
+        <sys_updated_on>2020-01-09 06:15:34</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"api-version","value":"2017-10-01-preview"}]}</value>
         <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -715,6 +732,20 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>71e96a1adb8a405046b9fb371d961988</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:18:45</sys_created_on>
+        <sys_id>7ef0aa88dbe2049046b9fb371d961967</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
+        <value>e0fb26cbdb91c01046b9fb371d961960</value>
+        <variable display_value="">445c2a72b3701300176b051a16a8dcc2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>71e96a1adb8a405046b9fb371d961988</document_key>
         <order>12</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -729,15 +760,29 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>71e96a1adb8a405046b9fb371d961988</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:18:45</sys_created_on>
+        <sys_id>b6f0aa88dbe2049046b9fb371d961967</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">91e207d03b50030057a4a2e334efc4a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>71e96a1adb8a405046b9fb371d961988</document_key>
         <order>10</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>b9e96a1adb8a405046b9fb371d96199a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
-        <value>e0fb26cbdb91c01046b9fb371d961960</value>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
+        <value/>
         <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -818,6 +863,18 @@
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>71e96a1adb8a405046b9fb371d961988</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:18:45</sys_created_on>
+        <sys_id>f2f0aa88dbe2049046b9fb371d961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>connection_alias</field>
         <id>71e96a1adb8a405046b9fb371d961988</id>
         <sys_created_by>admin</sys_created_by>
@@ -826,6 +883,18 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>71e96a1adb8a405046b9fb371d961988</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:18:45</sys_created_on>
+        <sys_id>baf0aa88dbe2049046b9fb371d961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value/>
     </sys_element_mapping>
@@ -871,11 +940,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>f1e96a1adb8a405046b9fb371d961999</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:27:45</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>/subscriptions/{{action.subscription_id1}}/resourceGroups/{{action.resource_groupname}}/providers/Microsoft.Sql/servers/{{action.server_name}}/databases/{{action.database_name}}?api-version=2017-10-01-preview</value>
+        <value>/subscriptions/{{action.subscription_id}}/resourceGroups/{{action.resource_groupname}}/providers/Microsoft.Sql/servers/{{action.server_name}}/databases/{{action.database_name}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>retry_policy</field>
@@ -952,14 +1021,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>71e96a1adb8a405046b9fb371d96198e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:18:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -988,14 +1057,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:40</sys_created_on>
         <sys_id>b9e96a1adb8a405046b9fb371d961969</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
+        <sys_updated_on>2020-01-16 09:03:41</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b9e96a1adb8a405046b9fb371d961969"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1006,33 +1075,61 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>31e96a1adb8a405046b9fb371d961985</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
-        <value>(function execute(inputs, outputs) {
-	var sku = {};
-	var skuNames = inputs.Sku.split('^');
-	for (var i = 0; i &lt; skuNames.length; i++) {
-		var skuLog = skuNames[i];
-		var skuSegregate = skuLog.split('=');
-		sku[skuSegregate[0]] = skuSegregate[1];
+        <sys_updated_on>2020-01-16 09:03:41</sys_updated_on>
+        <value>
 
+(function execute(inputs, outputs) {
+	var sku = {};
+	var skuIn = inputs.Sku;
+	if (skuIn != "") {
+		var skuNames = inputs.Sku.split('^');
+		for (var i = 0; i &lt; skuNames.length; i++) {
+			var skuLog = skuNames[i];
+			var skuSegregate = skuLog.split('=');
+			sku[skuSegregate[0]] = skuSegregate[1];
+
+		}
+		var results = new AzureDatabaseValidation().inputValidation(sku);
 	}
 	var properties = {};
-	var propertyNames = inputs.Properties.split('^');
-	for (var i = 0; i &lt; propertyNames.length; i++) {
-		var propLog = propertyNames[i];
-		var propSegregate = propLog.split('=');
-		properties[propSegregate[0]] = propSegregate[1];
+	var propIn = inputs.Properties;
+	if (propIn != "") {
+		var propertyNames = inputs.Properties.split('^');
+		for (var i = 0; i &lt; propertyNames.length; i++) {
+			var propLog = propertyNames[i];
+			var propSegregate = propLog.split('=');
+			properties[propSegregate[0]] = propSegregate[1];
+
+		}
+		var results1 = new AzureDatabaseValidation().inputValidation(properties);
+	}
+	if (propIn != "" &amp;&amp; skuIn != "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'sku': sku,
+			'properties': properties
+		});
+
+	} else if (propIn == "" &amp;&amp; skuIn != "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'sku': sku
+		});
+
+	} else if (propIn != "" &amp;&amp; skuIn == "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'properties': properties
+		});
+
+	} else {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location
+		});
 
 	}
-	outputs.sku = JSON.stringify({
-		'sku': sku,
-		'properties': properties,
-		'location': inputs.Location
-	});
-
-
 })(inputs, outputs);
 
 </value>
@@ -1456,14 +1553,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>c2e96a1adb8a405046b9fb371d96199f</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 10:51:45</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:17</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c2e96a1adb8a405046b9fb371d96199f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1488,11 +1585,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:42</sys_created_on>
         <sys_id>cee96a1adb8a405046b9fb371d9619bb</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 10:51:45</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:17</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 	var obj = JSON.parse(inputs['ResponseBody']);
+  var datID = obj.Azure-Async Database;
+  var opID = datID.split('/');
+  outputs.operationalstatus = opID[12];
 
 	if (inputs.Status == 200) {
 		outputs.status = "Success";
@@ -1724,7 +1824,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=c2e96a1adb8a405046b9fb371d96199f^sys_idNOT IN42e96a1adb8a405046b9fb371d9619b4,cee96a1adb8a405046b9fb371d9619ac"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=c2e96a1adb8a405046b9fb371d96199f^sys_idNOT IN42e96a1adb8a405046b9fb371d9619b4,73356e00db26049046b9fb371d961909,cee96a1adb8a405046b9fb371d9619ac"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1795,6 +1895,87 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>operationalstatus</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>operationalstatus</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Post Validation">c2e96a1adb8a405046b9fb371d96199f</model>
+        <model_id>c2e96a1adb8a405046b9fb371d96199f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_c2e96a1adb8a405046b9fb371d96199f</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:37:24</sys_created_on>
+        <sys_id>73356e00db26049046b9fb371d961909</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-21 06:40:17</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1887,7 +2068,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=c9e92a1adb8a405046b9fb371d9619fc^sys_idNOT IN2de96a1adb8a405046b9fb371d961938,2f4bae5adb8a405046b9fb371d96195f,6de96a1adb8a405046b9fb371d961926,95e96a1adb8a405046b9fb371d961913,dde96a1adb8a405046b9fb371d961901,dde96a1adb8a405046b9fb371d961907,e9e96a1adb8a405046b9fb371d961921"/>
+    <sys_hub_action_input action="delete_multiple" query="model=c9e92a1adb8a405046b9fb371d9619fc^sys_idNOT IN2de96a1adb8a405046b9fb371d961938,2f4bae5adb8a405046b9fb371d96195f,6de96a1adb8a405046b9fb371d961926,95e96a1adb8a405046b9fb371d961913,c66a02b6db92009046b9fb371d961927,dde96a1adb8a405046b9fb371d961907,e9e96a1adb8a405046b9fb371d961921"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1924,7 +2105,7 @@
         <help/>
         <hint/>
         <internal_type display_value="">template_value</internal_type>
-        <label>Sku</label>
+        <label>SKU</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
         <model display_value="Create Database - Generic">c9e92a1adb8a405046b9fb371d9619fc</model>
@@ -1950,14 +2131,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:39</sys_created_on>
         <sys_id>2de96a1adb8a405046b9fb371d961938</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:18:48</sys_updated_on>
+        <sys_updated_on>2020-01-13 06:06:23</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1977,9 +2158,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:39</sys_created_on>
         <sys_id>2de96a1adb8a405046b9fb371d96193d</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 07:40:14</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:26</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2de96a1adb8a405046b9fb371d96193d"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
@@ -2071,9 +2252,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:18:48</sys_created_on>
         <sys_id>a34bae5adb8a405046b9fb371d961967</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 07:40:14</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:26</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a34bae5adb8a405046b9fb371d961967"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2207,9 +2388,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:39</sys_created_on>
         <sys_id>e1e96a1adb8a405046b9fb371d961938</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 07:40:14</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:26</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e1e96a1adb8a405046b9fb371d961938"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
@@ -2297,13 +2478,13 @@
     <sys_hub_action_input_action_instance action="INSERT_OR_UPDATE">
         <action_input display_value="">95e96a1adb8a405046b9fb371d961913</action_input>
         <action_inputs/>
-        <action_type display_value="Get Servers - Dynamic">aa7f9e55db468c1046b9fb371d961980</action_type>
+        <action_type display_value="Get SQL Servers - Dynamic">aa7f9e55db468c1046b9fb371d961980</action_type>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:39</sys_created_on>
         <sys_id>19e96a1adb8a405046b9fb371d961918</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 07:40:13</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:26</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=19e96a1adb8a405046b9fb371d961918"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2328,10 +2509,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:39</sys_created_on>
         <sys_id>59e96a1adb8a405046b9fb371d961919</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:39</sys_updated_on>
-        <value>{{action.subscription_id1}}</value>
+        <sys_updated_on>2020-01-16 06:27:44</sys_updated_on>
+        <value>{{action.subscription_id}}</value>
         <variable display_value="">fa7f9e55db468c1046b9fb371d961984</variable>
     </sys_variable_value>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
@@ -2362,7 +2543,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>subscription_id1</element>
+        <element>subscription_id</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
@@ -2394,16 +2575,16 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_action_input</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-01-02 09:12:38</sys_created_on>
-        <sys_id>dde96a1adb8a405046b9fb371d961901</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2020-01-16 06:27:44</sys_created_on>
+        <sys_id>c66a02b6db92009046b9fb371d961927</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:35:44</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:27:44</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2504,9 +2685,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:39</sys_created_on>
         <sys_id>95e96a1adb8a405046b9fb371d961911</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 07:40:13</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:26</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=95e96a1adb8a405046b9fb371d961911"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2517,10 +2698,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:39</sys_created_on>
         <sys_id>d5e96a1adb8a405046b9fb371d961912</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:39</sys_updated_on>
-        <value>{{action.subscription_id1}}</value>
+        <sys_updated_on>2020-01-16 06:27:44</sys_updated_on>
+        <value>{{action.subscription_id}}</value>
         <variable display_value="">b5372f8adb71041046b9fb371d961969</variable>
     </sys_variable_value>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
@@ -2604,7 +2785,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
-    <sys_hub_action_output action="delete_multiple" query="model=c9e92a1adb8a405046b9fb371d9619fc^sys_idNOT IN46e96a1adb8a405046b9fb371d9619bf,4ee96a1adb8a405046b9fb371d9619c6"/>
+    <sys_hub_action_output action="delete_multiple" query="model=c9e92a1adb8a405046b9fb371d9619fc^sys_idNOT IN46e96a1adb8a405046b9fb371d9619bf,4ee96a1adb8a405046b9fb371d9619c6,a4156a00db26049046b9fb371d96197f"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -2771,6 +2952,89 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>operational_status</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Operational Status</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Database - Generic">c9e92a1adb8a405046b9fb371d9619fc</model>
+        <model_id>c9e92a1adb8a405046b9fb371d9619fc</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_c9e92a1adb8a405046b9fb371d9619fc</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:36:38</sys_created_on>
+        <sys_id>a4156a00db26049046b9fb371d96197f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:37:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=c9e92a1adb8a405046b9fb371d9619fc^sys_idNOT IN6de96a1adb8a405046b9fb371d961944,71e96a1adb8a405046b9fb371d961988,b9e96a1adb8a405046b9fb371d961969,c2e96a1adb8a405046b9fb371d96199f"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Create Database - Generic">c9e92a1adb8a405046b9fb371d9619fc</action>
@@ -2789,14 +3053,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:39</sys_created_on>
         <sys_id>6de96a1adb8a405046b9fb371d961944</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:40</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:27:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6de96a1adb8a405046b9fb371d961944"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2909,11 +3173,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:40</sys_created_on>
         <sys_id>31e96a1adb8a405046b9fb371d961967</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:40</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:27:45</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_6de96a1adb8a405046b9fb371d961944</table>
-        <value>{{action.subscription_id1}}</value>
+        <value>{{action.subscription_id}}</value>
     </sys_element_mapping>
     <sys_hub_step_ext_input action="delete_multiple" query="model=6de96a1adb8a405046b9fb371d961944^sys_idNOT IN29e96a1adb8a405046b9fb371d961957,69e96a1adb8a405046b9fb371d96195c,a5e96a1adb8a405046b9fb371d96194d,e5e96a1adb8a405046b9fb371d961952,e9e96a1adb8a405046b9fb371d961947"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
@@ -3338,14 +3602,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>71e96a1adb8a405046b9fb371d961988</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:18:49</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=71e96a1adb8a405046b9fb371d961988"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3384,10 +3648,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>79e96a1adb8a405046b9fb371d96199b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[]}</value>
+        <sys_updated_on>2020-01-09 06:15:34</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"api-version","value":"2017-10-01-preview"}]}</value>
         <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3407,6 +3671,20 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>71e96a1adb8a405046b9fb371d961988</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:18:45</sys_created_on>
+        <sys_id>7ef0aa88dbe2049046b9fb371d961967</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
+        <value>e0fb26cbdb91c01046b9fb371d961960</value>
+        <variable display_value="">445c2a72b3701300176b051a16a8dcc2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>71e96a1adb8a405046b9fb371d961988</document_key>
         <order>12</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -3421,15 +3699,29 @@
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>71e96a1adb8a405046b9fb371d961988</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:18:45</sys_created_on>
+        <sys_id>b6f0aa88dbe2049046b9fb371d961967</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">91e207d03b50030057a4a2e334efc4a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>71e96a1adb8a405046b9fb371d961988</document_key>
         <order>10</order>
         <sys_class_name>sys_variable_value</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>b9e96a1adb8a405046b9fb371d96199a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
-        <value>e0fb26cbdb91c01046b9fb371d961960</value>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
+        <value/>
         <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3510,6 +3802,18 @@
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>71e96a1adb8a405046b9fb371d961988</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:18:45</sys_created_on>
+        <sys_id>f2f0aa88dbe2049046b9fb371d961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>connection_alias</field>
         <id>71e96a1adb8a405046b9fb371d961988</id>
         <sys_created_by>admin</sys_created_by>
@@ -3518,6 +3822,18 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>71e96a1adb8a405046b9fb371d961988</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:18:45</sys_created_on>
+        <sys_id>baf0aa88dbe2049046b9fb371d961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:18:45</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value/>
     </sys_element_mapping>
@@ -3563,11 +3879,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>f1e96a1adb8a405046b9fb371d961999</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:27:45</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>/subscriptions/{{action.subscription_id1}}/resourceGroups/{{action.resource_groupname}}/providers/Microsoft.Sql/servers/{{action.server_name}}/databases/{{action.database_name}}?api-version=2017-10-01-preview</value>
+        <value>/subscriptions/{{action.subscription_id}}/resourceGroups/{{action.resource_groupname}}/providers/Microsoft.Sql/servers/{{action.server_name}}/databases/{{action.database_name}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>retry_policy</field>
@@ -3644,14 +3960,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>71e96a1adb8a405046b9fb371d96198e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:18:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3680,14 +3996,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:40</sys_created_on>
         <sys_id>b9e96a1adb8a405046b9fb371d961969</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
+        <sys_updated_on>2020-01-16 09:03:41</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b9e96a1adb8a405046b9fb371d961969"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3698,33 +4014,61 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>31e96a1adb8a405046b9fb371d961985</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
-        <value>(function execute(inputs, outputs) {
-	var sku = {};
-	var skuNames = inputs.Sku.split('^');
-	for (var i = 0; i &lt; skuNames.length; i++) {
-		var skuLog = skuNames[i];
-		var skuSegregate = skuLog.split('=');
-		sku[skuSegregate[0]] = skuSegregate[1];
+        <sys_updated_on>2020-01-16 09:03:41</sys_updated_on>
+        <value>
 
+(function execute(inputs, outputs) {
+	var sku = {};
+	var skuIn = inputs.Sku;
+	if (skuIn != "") {
+		var skuNames = inputs.Sku.split('^');
+		for (var i = 0; i &lt; skuNames.length; i++) {
+			var skuLog = skuNames[i];
+			var skuSegregate = skuLog.split('=');
+			sku[skuSegregate[0]] = skuSegregate[1];
+
+		}
+		var results = new AzureDatabaseValidation().inputValidation(sku);
 	}
 	var properties = {};
-	var propertyNames = inputs.Properties.split('^');
-	for (var i = 0; i &lt; propertyNames.length; i++) {
-		var propLog = propertyNames[i];
-		var propSegregate = propLog.split('=');
-		properties[propSegregate[0]] = propSegregate[1];
+	var propIn = inputs.Properties;
+	if (propIn != "") {
+		var propertyNames = inputs.Properties.split('^');
+		for (var i = 0; i &lt; propertyNames.length; i++) {
+			var propLog = propertyNames[i];
+			var propSegregate = propLog.split('=');
+			properties[propSegregate[0]] = propSegregate[1];
+
+		}
+		var results1 = new AzureDatabaseValidation().inputValidation(properties);
+	}
+	if (propIn != "" &amp;&amp; skuIn != "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'sku': sku,
+			'properties': properties
+		});
+
+	} else if (propIn == "" &amp;&amp; skuIn != "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'sku': sku
+		});
+
+	} else if (propIn != "" &amp;&amp; skuIn == "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'properties': properties
+		});
+
+	} else {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location
+		});
 
 	}
-	outputs.sku = JSON.stringify({
-		'sku': sku,
-		'properties': properties,
-		'location': inputs.Location
-	});
-
-
 })(inputs, outputs);
 
 </value>
@@ -4148,14 +4492,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:41</sys_created_on>
         <sys_id>c2e96a1adb8a405046b9fb371d96199f</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 10:51:45</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:17</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c2e96a1adb8a405046b9fb371d96199f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -4180,11 +4524,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:42</sys_created_on>
         <sys_id>cee96a1adb8a405046b9fb371d9619bb</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 10:51:45</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:17</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 	var obj = JSON.parse(inputs['ResponseBody']);
+  var datID = obj.Azure-Async Database;
+  var opID = datID.split('/');
+  outputs.operationalstatus = opID[12];
 
 	if (inputs.Status == 200) {
 		outputs.status = "Success";
@@ -4416,7 +4763,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=c2e96a1adb8a405046b9fb371d96199f^sys_idNOT IN42e96a1adb8a405046b9fb371d9619b4,cee96a1adb8a405046b9fb371d9619ac"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=c2e96a1adb8a405046b9fb371d96199f^sys_idNOT IN42e96a1adb8a405046b9fb371d9619b4,73356e00db26049046b9fb371d961909,cee96a1adb8a405046b9fb371d9619ac"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -4487,6 +4834,87 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-01-02 09:12:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>operationalstatus</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>operationalstatus</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Post Validation">c2e96a1adb8a405046b9fb371d96199f</model>
+        <model_id>c2e96a1adb8a405046b9fb371d96199f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_c2e96a1adb8a405046b9fb371d96199f</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:37:24</sys_created_on>
+        <sys_id>73356e00db26049046b9fb371d961909</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-21 06:40:17</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -4579,27 +5007,27 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_c9e92a1adb8a405046b9fb371d9619fc^sys_idNOT IN11e96a1adb8a405046b9fb371d961907,19e96a1adb8a405046b9fb371d961910,274bae5adb8a405046b9fb371d961966,65e96a1adb8a405046b9fb371d961937,99e96a1adb8a405046b9fb371d961917,ade96a1adb8a405046b9fb371d961925,ade96a1adb8a405046b9fb371d96193c"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_c9e92a1adb8a405046b9fb371d9619fc^sys_idNOT IN066a02b6db92009046b9fb371d96192c,19e96a1adb8a405046b9fb371d961910,274bae5adb8a405046b9fb371d961966,65e96a1adb8a405046b9fb371d961937,99e96a1adb8a405046b9fb371d961917,ade96a1adb8a405046b9fb371d961925,ade96a1adb8a405046b9fb371d96193c"/>
     <sys_documentation action="INSERT_OR_UPDATE">
-        <element>subscription_id1</element>
+        <element>subscription_id</element>
         <help/>
-        <hint>Subscription ID that identifies an Azure Subscription</hint>
+        <hint/>
         <label>Subscription ID</label>
         <language>en</language>
         <name>var__m_sys_hub_action_input_c9e92a1adb8a405046b9fb371d9619fc</name>
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-01-02 09:12:38</sys_created_on>
-        <sys_id>11e96a1adb8a405046b9fb371d961907</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_created_on>2020-01-16 06:27:44</sys_created_on>
+        <sys_id>066a02b6db92009046b9fb371d96192c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Subscription ID</sys_name>
         <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_c9e92a1adb8a405046b9fb371d9619fc_subscription_id1_en</sys_update_name>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_c9e92a1adb8a405046b9fb371d9619fc_subscription_id_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:35:44</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:27:44</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -4722,7 +5150,7 @@
         <element>sku</element>
         <help/>
         <hint>Sku Properties to create Database</hint>
-        <label>Sku</label>
+        <label>SKU</label>
         <language>en</language>
         <name>var__m_sys_hub_action_input_c9e92a1adb8a405046b9fb371d9619fc</name>
         <plural/>
@@ -4730,14 +5158,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:12:39</sys_created_on>
         <sys_id>ade96a1adb8a405046b9fb371d96193c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Sku</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>SKU</sys_name>
         <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name>sys_documentation_var__m_sys_hub_action_input_c9e92a1adb8a405046b9fb371d9619fc_sku_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:35:44</sys_updated_on>
+        <sys_updated_on>2020-01-13 06:06:23</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -4782,7 +5210,7 @@
             <value>resource2</value>
         </sys_choice>
     </sys_choice>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_c9e92a1adb8a405046b9fb371d9619fc^sys_idNOT IN42e96a1adb8a405046b9fb371d9619cb,8ee96a1adb8a405046b9fb371d9619c5"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_c9e92a1adb8a405046b9fb371d9619fc^sys_idNOT IN42e96a1adb8a405046b9fb371d9619cb,8ee96a1adb8a405046b9fb371d9619c5,e4156a00db26049046b9fb371d961983"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>errormessage</element>
         <help/>
@@ -4826,6 +5254,29 @@
         <sys_update_name>sys_documentation_var__m_sys_hub_action_output_c9e92a1adb8a405046b9fb371d9619fc_status_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-01-02 09:12:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>operational_status</element>
+        <help/>
+        <hint/>
+        <label>Operational Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_c9e92a1adb8a405046b9fb371d9619fc</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:36:38</sys_created_on>
+        <sys_id>e4156a00db26049046b9fb371d961983</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Operational Status</sys_name>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_c9e92a1adb8a405046b9fb371d9619fc_operational_status_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:36:38</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -4874,13 +5325,13 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Create Database - Generic">c9e92a1adb8a405046b9fb371d9619fc</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"f36b269adb8a405046b9fb371d96194d","name":"plan"}}</plan>
-        <snapshot>d88695dfdb4a045046b9fb371d961952</snapshot>
+        <snapshot>764df3d4db2a449046b9fb371d961938</snapshot>
         <sys_class_name>sys_hub_action_plan</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:22</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>f36b269adb8a405046b9fb371d96194d</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -4888,7 +5339,7 @@
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:42:23</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:46</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -4899,7 +5350,7 @@
         <category display_value="Create Database">37ef529edb4a405046b9fb371d961941</category>
         <copied_from/>
         <copied_from_name/>
-        <description>&lt;p&gt;This action creates a Generic Database in Microsoft Azure SQL which don't have specifications like VCore or Hyperscale.&lt;/p&gt;
+        <description>&lt;p&gt;Create a Generic Database in Microsoft Azure.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Inputs:&lt;/b&gt;&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;b&gt;Subscription Id&lt;/b&gt; - Subscription ID that identifies an Azure Subscription.&lt;/li&gt;
@@ -4907,7 +5358,7 @@
 &lt;li&gt;&lt;b&gt;Server Name &lt;/b&gt; - Name of the Server.&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;Database Name&lt;/b&gt; - Name of the Database to be created.&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;Location&lt;/b&gt; - Name of Database Location.&lt;/li&gt;
-&lt;li&gt;&lt;b&gt;Sku&lt;/b&gt; - Sku Properties to create Database.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;SKU&lt;/b&gt; - SKU Properties to create Database.&lt;/li&gt;
 &lt;li&gt;&lt;b&gt;Properties&lt;/b&gt; - Properties to create Database.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;b&gt;Outputs:&lt;/b&gt;&lt;/p&gt;
@@ -4917,14 +5368,12 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;b&gt;Error Messages:&lt;/b&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt; The request was rejected because it attempted to create resources beyond the current AWS account limits. The error message describes the limit exceeded.&lt;/li&gt;
-  &lt;li&gt; The request was rejected because it referenced a resource entity that does not exist. The error message describes the resource.&lt;/li&gt;
-  &lt;li&gt;The request processing has failed because of an unknown error, exception or failure.&lt;/li&gt;
+&lt;li&gt; Either Subscription ID or Resource Group or Server or Database or API Version entered is invalid or not found.&lt;/li&gt;
+&lt;li&gt; Either mismatch between properties or property values entered are invalid.&lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
         <internal_name>create_database__generic</internal_name>
-        <label_cache>[{"name":"{{action.subscription_id1}}","label":"action➛Subscription ID","type":"action","ref":""},{"name":"{{action.resource_groupname}}","label":"action➛Resource GroupName","type":"action","ref":""},{"name":"{{action.server_name}}","label":"action➛Server Name","type":"action","ref":""},{"name":"{{action.database_name}}","label":"action➛Database Name","type":"action","ref":""},{"name":"{{action.location}}","label":"action➛Location","type":"action","ref":""},{"name":"{{action.properties}}","label":"action➛Properties","type":"action","ref":""},{"name":"{{action.sku}}","label":"action➛Sku","type":"action","ref":""},{"name":"{{step[78540522-da38-4d99-95d4-edb9817e46f1].sku}}","label":"step➛Pay Load Script➛sku","type":"step","ref":""},{"name":"{{step[d4bbf0be-9058-4b1a-b6e6-24265f0cea98].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[d4bbf0be-9058-4b1a-b6e6-24265f0cea98].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].status}}","label":"step➛Post Validation➛Status","type":"step","ref":""},{"name":"{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].errormessage}}","label":"step➛Post Validation➛ErrorMessage","type":"step","ref":""}]</label_cache>
+        <label_cache>[{"name":"{{action.resource_groupname}}","label":"action➛Resource GroupName","type":"action","ref":""},{"name":"{{action.server_name}}","label":"action➛Server Name","type":"action","ref":""},{"name":"{{action.database_name}}","label":"action➛Database Name","type":"action","ref":""},{"name":"{{action.location}}","label":"action➛Location","type":"action","ref":""},{"name":"{{action.properties}}","label":"action➛Properties","type":"action","ref":""},{"name":"{{action.sku}}","label":"action➛SKU","type":"action","ref":""},{"name":"{{action.subscription_id}}","label":"action➛Subscription ID","type":"action","ref":""},{"name":"{{step[78540522-da38-4d99-95d4-edb9817e46f1].sku}}","label":"step➛Pay Load Script➛sku","type":"step","ref":""},{"name":"{{step[d4bbf0be-9058-4b1a-b6e6-24265f0cea98].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""},{"name":"{{step[d4bbf0be-9058-4b1a-b6e6-24265f0cea98].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":""},{"name":"{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].status}}","label":"step➛Post Validation➛Status","type":"step","ref":""},{"name":"{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].errormessage}}","label":"step➛Post Validation➛ErrorMessage","type":"step","ref":""},{"name":"{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].operationalstatus}}","label":"step➛Post Validation➛OperationalStatus","type":"step","ref":""}]</label_cache>
         <master>true</master>
         <name>Create Database - Generic</name>
         <outputs/>
@@ -4935,7 +5384,7 @@
         <sys_created_on>2020-01-02 09:19:14</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>3d6ba29adb8a405046b9fb371d96194c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -4943,7 +5392,7 @@
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:42:17</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:37:50</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -4961,6 +5410,18 @@
         <sys_updated_on>2020-01-02 09:19:17</sys_updated_on>
         <table>var__m_sys_hub_action_output_3d6ba29adb8a405046b9fb371d96194c</table>
         <value>{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].errormessage}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>operational_status</field>
+        <id>3d6ba29adb8a405046b9fb371d96194c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:37:51</sys_created_on>
+        <sys_id>2a556240db26049046b9fb371d961952</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:37:51</sys_updated_on>
+        <table>var__m_sys_hub_action_output_3d6ba29adb8a405046b9fb371d96194c</table>
+        <value>{{step[7a8ff153-847e-4d2f-b418-67019ff637b3].operationalstatus}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>status</field>
@@ -4992,16 +5453,30 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>526ba29adb8a405046b9fb371d9619dc</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=526ba29adb8a405046b9fb371d9619dc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>526ba29adb8a405046b9fb371d9619dc</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:19:08</sys_created_on>
+        <sys_id>1011ae88dbe2049046b9fb371d96193d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">91e207d03b50030057a4a2e334efc4a0</variable>
+    </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>526ba29adb8a405046b9fb371d9619dc</document_key>
@@ -5038,10 +5513,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>566ba29adb8a405046b9fb371d9619ef</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[]}</value>
+        <sys_updated_on>2020-01-09 06:15:54</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"api-version","value":"2017-10-01-preview"}]}</value>
         <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5080,11 +5555,25 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>966ba29adb8a405046b9fb371d9619ee</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
+        <value/>
+        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>526ba29adb8a405046b9fb371d9619dc</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:19:08</sys_created_on>
+        <sys_id>d011ae88dbe2049046b9fb371d96193d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
         <value>e0fb26cbdb91c01046b9fb371d961960</value>
-        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+        <variable display_value="">445c2a72b3701300176b051a16a8dcc2</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -5164,6 +5653,18 @@
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>526ba29adb8a405046b9fb371d9619dc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:19:08</sys_created_on>
+        <sys_id>1811ae88dbe2049046b9fb371d96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>connection_alias</field>
         <id>526ba29adb8a405046b9fb371d9619dc</id>
         <sys_created_by>admin</sys_created_by>
@@ -5172,6 +5673,18 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>526ba29adb8a405046b9fb371d9619dc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:19:08</sys_created_on>
+        <sys_id>d811ae88dbe2049046b9fb371d96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value/>
     </sys_element_mapping>
@@ -5217,11 +5730,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>de6ba29adb8a405046b9fb371d9619ec</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:28:09</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>/subscriptions/{{action.subscription_id1}}/resourceGroups/{{action.resource_groupname}}/providers/Microsoft.Sql/servers/{{action.server_name}}/databases/{{action.database_name}}?api-version=2017-10-01-preview</value>
+        <value>/subscriptions/{{action.subscription_id}}/resourceGroups/{{action.resource_groupname}}/providers/Microsoft.Sql/servers/{{action.server_name}}/databases/{{action.database_name}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>retry_policy</field>
@@ -5334,14 +5847,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:15</sys_created_on>
         <sys_id>5e6ba29adb8a405046b9fb371d9619bd</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
+        <sys_updated_on>2020-01-16 09:04:00</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5e6ba29adb8a405046b9fb371d9619bd"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5352,33 +5865,61 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>126ba29adb8a405046b9fb371d9619d9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
-        <value>(function execute(inputs, outputs) {
-	var sku = {};
-	var skuNames = inputs.Sku.split('^');
-	for (var i = 0; i &lt; skuNames.length; i++) {
-		var skuLog = skuNames[i];
-		var skuSegregate = skuLog.split('=');
-		sku[skuSegregate[0]] = skuSegregate[1];
+        <sys_updated_on>2020-01-16 09:04:00</sys_updated_on>
+        <value>
 
+(function execute(inputs, outputs) {
+	var sku = {};
+	var skuIn = inputs.Sku;
+	if (skuIn != "") {
+		var skuNames = inputs.Sku.split('^');
+		for (var i = 0; i &lt; skuNames.length; i++) {
+			var skuLog = skuNames[i];
+			var skuSegregate = skuLog.split('=');
+			sku[skuSegregate[0]] = skuSegregate[1];
+
+		}
+		var results = new AzureDatabaseValidation().inputValidation(sku);
 	}
 	var properties = {};
-	var propertyNames = inputs.Properties.split('^');
-	for (var i = 0; i &lt; propertyNames.length; i++) {
-		var propLog = propertyNames[i];
-		var propSegregate = propLog.split('=');
-		properties[propSegregate[0]] = propSegregate[1];
+	var propIn = inputs.Properties;
+	if (propIn != "") {
+		var propertyNames = inputs.Properties.split('^');
+		for (var i = 0; i &lt; propertyNames.length; i++) {
+			var propLog = propertyNames[i];
+			var propSegregate = propLog.split('=');
+			properties[propSegregate[0]] = propSegregate[1];
+
+		}
+		var results1 = new AzureDatabaseValidation().inputValidation(properties);
+	}
+	if (propIn != "" &amp;&amp; skuIn != "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'sku': sku,
+			'properties': properties
+		});
+
+	} else if (propIn == "" &amp;&amp; skuIn != "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'sku': sku
+		});
+
+	} else if (propIn != "" &amp;&amp; skuIn == "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'properties': properties
+		});
+
+	} else {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location
+		});
 
 	}
-	outputs.sku = JSON.stringify({
-		'sku': sku,
-		'properties': properties,
-		'location': inputs.Location
-	});
-
-
 })(inputs, outputs);
 
 </value>
@@ -5802,14 +6343,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>5e6ba29adb8a405046b9fb371d9619f2</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 10:52:02</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:40</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5e6ba29adb8a405046b9fb371d9619f2"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5820,11 +6361,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:17</sys_created_on>
         <sys_id>6e6be29adb8a405046b9fb371d961934</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 10:52:02</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:40</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 	var obj = JSON.parse(inputs['ResponseBody']);
+  var datID = obj.Azure-Async Database;
+  var opID = datID.split('/');
+  outputs.operationalstatus = opID[12];
 
 	if (inputs.Status == 200) {
 		outputs.status = "Success";
@@ -6070,7 +6614,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=5e6ba29adb8a405046b9fb371d9619f2^sys_idNOT IN226be29adb8a405046b9fb371d96190d,6a6be29adb8a405046b9fb371d961920"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=5e6ba29adb8a405046b9fb371d9619f2^sys_idNOT IN226be29adb8a405046b9fb371d96190d,66556240db26049046b9fb371d96193f,6a6be29adb8a405046b9fb371d961920"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -6180,6 +6724,87 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
+        <element>operationalstatus</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>operationalstatus</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Post Validation">5e6ba29adb8a405046b9fb371d9619f2</model>
+        <model_id>5e6ba29adb8a405046b9fb371d9619f2</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_5e6ba29adb8a405046b9fb371d9619f2</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:37:51</sys_created_on>
+        <sys_id>66556240db26049046b9fb371d96193f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-21 06:40:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
         <element>errormessage</element>
         <element_reference>false</element_reference>
         <foreign_database/>
@@ -6250,14 +6875,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:15</sys_created_on>
         <sys_id>c66ba29adb8a405046b9fb371d96199a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:15</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:28:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c66ba29adb8a405046b9fb371d96199a"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -6370,11 +6995,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:15</sys_created_on>
         <sys_id>566ba29adb8a405046b9fb371d9619bb</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:15</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:28:08</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_c66ba29adb8a405046b9fb371d96199a</table>
-        <value>{{action.subscription_id1}}</value>
+        <value>{{action.subscription_id}}</value>
     </sys_element_mapping>
     <sys_hub_step_ext_input action="delete_multiple" query="model=c66ba29adb8a405046b9fb371d96199a^sys_idNOT IN0a6ba29adb8a405046b9fb371d9619a2,426ba29adb8a405046b9fb371d96199d,4a6ba29adb8a405046b9fb371d9619a7,8a6ba29adb8a405046b9fb371d9619ac,ca6ba29adb8a405046b9fb371d9619b1"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
@@ -6782,7 +7407,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_action_input action="delete_multiple" query="model=3d6ba29adb8a405046b9fb371d96194c^sys_idNOT IN396ba29adb8a405046b9fb371d96195d,426ba29adb8a405046b9fb371d961989,7d6ba29adb8a405046b9fb371d96194d,8a6ba29adb8a405046b9fb371d96198e,b56ba29adb8a405046b9fb371d961953,ce6ba29adb8a405046b9fb371d96197c,ce6ba29adb8a405046b9fb371d961983"/>
+    <sys_hub_action_input action="delete_multiple" query="model=3d6ba29adb8a405046b9fb371d96194c^sys_idNOT IN396ba29adb8a405046b9fb371d96195d,426ba29adb8a405046b9fb371d961989,8a6ba29adb8a405046b9fb371d96198e,b56ba29adb8a405046b9fb371d961953,ce6ba29adb8a405046b9fb371d96197c,ce6ba29adb8a405046b9fb371d961983,f37a06b6db92009046b9fb371d961914"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -6868,13 +7493,13 @@
     <sys_hub_action_input_action_instance action="INSERT_OR_UPDATE">
         <action_input display_value="">396ba29adb8a405046b9fb371d96195d</action_input>
         <action_inputs/>
-        <action_type display_value="Get Servers - Dynamic">aa7f9e55db468c1046b9fb371d961980</action_type>
+        <action_type display_value="Get SQL Servers - Dynamic">aa7f9e55db468c1046b9fb371d961980</action_type>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:14</sys_created_on>
         <sys_id>396ba29adb8a405046b9fb371d96197b</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:42:17</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:38</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=396ba29adb8a405046b9fb371d96197b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -6899,10 +7524,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:14</sys_created_on>
         <sys_id>756ba29adb8a405046b9fb371d96197c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:14</sys_updated_on>
-        <value>{{action.subscription_id1}}</value>
+        <sys_updated_on>2020-01-16 06:28:07</sys_updated_on>
+        <value>{{action.subscription_id}}</value>
         <variable display_value="">fa7f9e55db468c1046b9fb371d961984</variable>
     </sys_variable_value>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
@@ -6941,7 +7566,7 @@
         <help/>
         <hint/>
         <internal_type display_value="">template_value</internal_type>
-        <label>Sku</label>
+        <label>SKU</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
         <model display_value="Create Database - Generic">3d6ba29adb8a405046b9fb371d96194c</model>
@@ -6967,14 +7592,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:14</sys_created_on>
         <sys_id>426ba29adb8a405046b9fb371d961989</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:14</sys_updated_on>
+        <sys_updated_on>2020-01-13 06:06:42</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -6994,92 +7619,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:15</sys_created_on>
         <sys_id>426ba29adb8a405046b9fb371d96198e</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:42:17</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:39</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=426ba29adb8a405046b9fb371d96198e"/>
-    <sys_hub_action_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>subscription_id1</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="String">string</internal_type>
-        <label>Subscription ID</label>
-        <mandatory>true</mandatory>
-        <max_length>8000</max_length>
-        <model display_value="Create Database - Generic">3d6ba29adb8a405046b9fb371d96194c</model>
-        <model_id>3d6ba29adb8a405046b9fb371d96194c</model_id>
-        <model_table>sys_hub_action_type_snapshot</model_table>
-        <name>var__m_sys_hub_action_input_3d6ba29adb8a405046b9fb371d96194c</name>
-        <next_element/>
-        <order>1</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_action_input</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-01-02 09:19:14</sys_created_on>
-        <sys_id>7d6ba29adb8a405046b9fb371d96194d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:42:17</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_action_input>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -7169,9 +7713,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:15</sys_created_on>
         <sys_id>8a6ba29adb8a405046b9fb371d961993</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:42:17</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:39</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8a6ba29adb8a405046b9fb371d961993"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
@@ -7263,9 +7807,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:14</sys_created_on>
         <sys_id>396ba29adb8a405046b9fb371d96195c</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:42:17</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:38</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=396ba29adb8a405046b9fb371d96195c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -7276,10 +7820,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:14</sys_created_on>
         <sys_id>716ba29adb8a405046b9fb371d96195d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:14</sys_updated_on>
-        <value>{{action.subscription_id1}}</value>
+        <sys_updated_on>2020-01-16 06:28:07</sys_updated_on>
+        <value>{{action.subscription_id}}</value>
         <variable display_value="">b5372f8adb71041046b9fb371d961969</variable>
     </sys_variable_value>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
@@ -7371,9 +7915,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:14</sys_created_on>
         <sys_id>426ba29adb8a405046b9fb371d961982</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:42:17</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:38</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=426ba29adb8a405046b9fb371d961982"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -7499,7 +8043,88 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
-    <sys_hub_action_output action="delete_multiple" query="model=3d6ba29adb8a405046b9fb371d96194c^sys_idNOT INe26be29adb8a405046b9fb371d961938,e66be29adb8a405046b9fb371d96193f"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>subscription_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Subscription ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Database - Generic">3d6ba29adb8a405046b9fb371d96194c</model>
+        <model_id>3d6ba29adb8a405046b9fb371d96194c</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_3d6ba29adb8a405046b9fb371d96194c</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-16 06:28:07</sys_created_on>
+        <sys_id>f37a06b6db92009046b9fb371d961914</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-16 06:28:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_output action="delete_multiple" query="model=3d6ba29adb8a405046b9fb371d96194c^sys_idNOT INe26be29adb8a405046b9fb371d961938,e66be29adb8a405046b9fb371d96193f,ee556240db26049046b9fb371d96194b"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -7666,6 +8291,89 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>operational_status</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Operational Status</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Create Database - Generic">3d6ba29adb8a405046b9fb371d96194c</model>
+        <model_id>3d6ba29adb8a405046b9fb371d96194c</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_3d6ba29adb8a405046b9fb371d96194c</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:37:51</sys_created_on>
+        <sys_id>ee556240db26049046b9fb371d96194b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:37:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
     <sys_hub_step_instance action="delete_multiple" query="action=3d6ba29adb8a405046b9fb371d96194c^sys_idNOT IN526ba29adb8a405046b9fb371d9619dc,5e6ba29adb8a405046b9fb371d9619bd,5e6ba29adb8a405046b9fb371d9619f2,c66ba29adb8a405046b9fb371d96199a"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Create Database - Generic">3d6ba29adb8a405046b9fb371d96194c</action>
@@ -7684,16 +8392,30 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>526ba29adb8a405046b9fb371d9619dc</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=526ba29adb8a405046b9fb371d9619dc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>526ba29adb8a405046b9fb371d9619dc</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:19:08</sys_created_on>
+        <sys_id>1011ae88dbe2049046b9fb371d96193d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">91e207d03b50030057a4a2e334efc4a0</variable>
+    </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>526ba29adb8a405046b9fb371d9619dc</document_key>
@@ -7730,10 +8452,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>566ba29adb8a405046b9fb371d9619ef</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
-        <value>{"type":"ADV_NV","value":[]}</value>
+        <sys_updated_on>2020-01-09 06:15:54</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"api-version","value":"2017-10-01-preview"}]}</value>
         <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -7772,11 +8494,25 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>966ba29adb8a405046b9fb371d9619ee</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
+        <value/>
+        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>526ba29adb8a405046b9fb371d9619dc</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:19:08</sys_created_on>
+        <sys_id>d011ae88dbe2049046b9fb371d96193d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
         <value>e0fb26cbdb91c01046b9fb371d961960</value>
-        <variable display_value="">262882f03b23320057a4a2e334efc4f0</variable>
+        <variable display_value="">445c2a72b3701300176b051a16a8dcc2</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
@@ -7856,6 +8592,18 @@
         <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>526ba29adb8a405046b9fb371d9619dc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:19:08</sys_created_on>
+        <sys_id>1811ae88dbe2049046b9fb371d96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>connection_alias</field>
         <id>526ba29adb8a405046b9fb371d9619dc</id>
         <sys_created_by>admin</sys_created_by>
@@ -7864,6 +8612,18 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>526ba29adb8a405046b9fb371d9619dc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:19:08</sys_created_on>
+        <sys_id>d811ae88dbe2049046b9fb371d96193c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:19:08</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value/>
     </sys_element_mapping>
@@ -7909,11 +8669,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>de6ba29adb8a405046b9fb371d9619ec</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:28:09</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
-        <value>/subscriptions/{{action.subscription_id1}}/resourceGroups/{{action.resource_groupname}}/providers/Microsoft.Sql/servers/{{action.server_name}}/databases/{{action.database_name}}?api-version=2017-10-01-preview</value>
+        <value>/subscriptions/{{action.subscription_id}}/resourceGroups/{{action.resource_groupname}}/providers/Microsoft.Sql/servers/{{action.server_name}}/databases/{{action.database_name}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>retry_policy</field>
@@ -8026,14 +8786,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:15</sys_created_on>
         <sys_id>5e6ba29adb8a405046b9fb371d9619bd</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
+        <sys_updated_on>2020-01-16 09:04:00</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5e6ba29adb8a405046b9fb371d9619bd"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -8044,33 +8804,61 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>126ba29adb8a405046b9fb371d9619d9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:16</sys_updated_on>
-        <value>(function execute(inputs, outputs) {
-	var sku = {};
-	var skuNames = inputs.Sku.split('^');
-	for (var i = 0; i &lt; skuNames.length; i++) {
-		var skuLog = skuNames[i];
-		var skuSegregate = skuLog.split('=');
-		sku[skuSegregate[0]] = skuSegregate[1];
+        <sys_updated_on>2020-01-16 09:04:00</sys_updated_on>
+        <value>
 
+(function execute(inputs, outputs) {
+	var sku = {};
+	var skuIn = inputs.Sku;
+	if (skuIn != "") {
+		var skuNames = inputs.Sku.split('^');
+		for (var i = 0; i &lt; skuNames.length; i++) {
+			var skuLog = skuNames[i];
+			var skuSegregate = skuLog.split('=');
+			sku[skuSegregate[0]] = skuSegregate[1];
+
+		}
+		var results = new AzureDatabaseValidation().inputValidation(sku);
 	}
 	var properties = {};
-	var propertyNames = inputs.Properties.split('^');
-	for (var i = 0; i &lt; propertyNames.length; i++) {
-		var propLog = propertyNames[i];
-		var propSegregate = propLog.split('=');
-		properties[propSegregate[0]] = propSegregate[1];
+	var propIn = inputs.Properties;
+	if (propIn != "") {
+		var propertyNames = inputs.Properties.split('^');
+		for (var i = 0; i &lt; propertyNames.length; i++) {
+			var propLog = propertyNames[i];
+			var propSegregate = propLog.split('=');
+			properties[propSegregate[0]] = propSegregate[1];
+
+		}
+		var results1 = new AzureDatabaseValidation().inputValidation(properties);
+	}
+	if (propIn != "" &amp;&amp; skuIn != "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'sku': sku,
+			'properties': properties
+		});
+
+	} else if (propIn == "" &amp;&amp; skuIn != "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'sku': sku
+		});
+
+	} else if (propIn != "" &amp;&amp; skuIn == "") {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location,
+			'properties': properties
+		});
+
+	} else {
+		outputs.sku = JSON.stringify({
+			'location': inputs.Location
+		});
 
 	}
-	outputs.sku = JSON.stringify({
-		'sku': sku,
-		'properties': properties,
-		'location': inputs.Location
-	});
-
-
 })(inputs, outputs);
 
 </value>
@@ -8494,14 +9282,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:16</sys_created_on>
         <sys_id>5e6ba29adb8a405046b9fb371d9619f2</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 10:52:02</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:40</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5e6ba29adb8a405046b9fb371d9619f2"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -8512,11 +9300,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:17</sys_created_on>
         <sys_id>6e6be29adb8a405046b9fb371d961934</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 10:52:02</sys_updated_on>
+        <sys_updated_on>2020-01-21 06:40:40</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 	var obj = JSON.parse(inputs['ResponseBody']);
+  var datID = obj.Azure-Async Database;
+  var opID = datID.split('/');
+  outputs.operationalstatus = opID[12];
 
 	if (inputs.Status == 200) {
 		outputs.status = "Success";
@@ -8762,7 +9553,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=5e6ba29adb8a405046b9fb371d9619f2^sys_idNOT IN226be29adb8a405046b9fb371d96190d,6a6be29adb8a405046b9fb371d961920"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=5e6ba29adb8a405046b9fb371d9619f2^sys_idNOT IN226be29adb8a405046b9fb371d96190d,66556240db26049046b9fb371d96193f,6a6be29adb8a405046b9fb371d961920"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -8872,6 +9663,87 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
+        <element>operationalstatus</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>operationalstatus</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Post Validation">5e6ba29adb8a405046b9fb371d9619f2</model>
+        <model_id>5e6ba29adb8a405046b9fb371d9619f2</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_5e6ba29adb8a405046b9fb371d9619f2</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:37:51</sys_created_on>
+        <sys_id>66556240db26049046b9fb371d96193f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-21 06:40:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
         <element>errormessage</element>
         <element_reference>false</element_reference>
         <foreign_database/>
@@ -8942,14 +9814,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:15</sys_created_on>
         <sys_id>c66ba29adb8a405046b9fb371d96199a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:15</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:28:08</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c66ba29adb8a405046b9fb371d96199a"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -9062,11 +9934,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:15</sys_created_on>
         <sys_id>566ba29adb8a405046b9fb371d9619bb</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:15</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:28:08</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_c66ba29adb8a405046b9fb371d96199a</table>
-        <value>{{action.subscription_id1}}</value>
+        <value>{{action.subscription_id}}</value>
     </sys_element_mapping>
     <sys_hub_step_ext_input action="delete_multiple" query="model=c66ba29adb8a405046b9fb371d96199a^sys_idNOT IN0a6ba29adb8a405046b9fb371d9619a2,426ba29adb8a405046b9fb371d96199d,4a6ba29adb8a405046b9fb371d9619a7,8a6ba29adb8a405046b9fb371d9619ac,ca6ba29adb8a405046b9fb371d9619b1"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
@@ -9474,7 +10346,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_3d6ba29adb8a405046b9fb371d96194c^sys_idNOT IN0e6ba29adb8a405046b9fb371d961992,826ba29adb8a405046b9fb371d961988,b96ba29adb8a405046b9fb371d96195b,b96ba29adb8a405046b9fb371d96197a,c26ba29adb8a405046b9fb371d961981,c26ba29adb8a405046b9fb371d96198d,f56ba29adb8a405046b9fb371d961952"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_3d6ba29adb8a405046b9fb371d96194c^sys_idNOT IN0e6ba29adb8a405046b9fb371d961992,826ba29adb8a405046b9fb371d961988,b96ba29adb8a405046b9fb371d96195b,b96ba29adb8a405046b9fb371d96197a,c26ba29adb8a405046b9fb371d961981,c26ba29adb8a405046b9fb371d96198d,ff7a06b6db92009046b9fb371d961918"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>properties</element>
         <help/>
@@ -9594,7 +10466,7 @@
         <element>sku</element>
         <help/>
         <hint/>
-        <label>Sku</label>
+        <label>SKU</label>
         <language>en</language>
         <name>var__m_sys_hub_action_input_3d6ba29adb8a405046b9fb371d96194c</name>
         <plural/>
@@ -9602,19 +10474,19 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-01-02 09:19:15</sys_created_on>
         <sys_id>c26ba29adb8a405046b9fb371d96198d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Sku</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>SKU</sys_name>
         <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name>sys_documentation_var__m_sys_hub_action_input_3d6ba29adb8a405046b9fb371d96194c_sku_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 09:19:15</sys_updated_on>
+        <sys_updated_on>2020-01-13 06:06:42</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
     <sys_documentation action="INSERT_OR_UPDATE">
-        <element>subscription_id1</element>
+        <element>subscription_id</element>
         <help/>
         <hint/>
         <label>Subscription ID</label>
@@ -9623,16 +10495,16 @@
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-01-02 09:19:14</sys_created_on>
-        <sys_id>f56ba29adb8a405046b9fb371d961952</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2020-01-16 06:28:07</sys_created_on>
+        <sys_id>ff7a06b6db92009046b9fb371d961918</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Subscription ID</sys_name>
         <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_3d6ba29adb8a405046b9fb371d96194c_subscription_id1_en</sys_update_name>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_3d6ba29adb8a405046b9fb371d96194c_subscription_id_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-05 05:42:17</sys_updated_on>
+        <sys_updated_on>2020-01-16 06:28:07</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -9677,7 +10549,7 @@
             <value>resource2</value>
         </sys_choice>
     </sys_choice>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_3d6ba29adb8a405046b9fb371d96194c^sys_idNOT IN2a6be29adb8a405046b9fb371d96193e,ea6be29adb8a405046b9fb371d961943"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_3d6ba29adb8a405046b9fb371d96194c^sys_idNOT IN2a6be29adb8a405046b9fb371d96193e,ea6be29adb8a405046b9fb371d961943,ee556240db26049046b9fb371d96194f"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>status</element>
         <help/>
@@ -9721,6 +10593,29 @@
         <sys_update_name>sys_documentation_var__m_sys_hub_action_output_3d6ba29adb8a405046b9fb371d96194c_errormessage_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-01-02 09:19:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>operational_status</element>
+        <help/>
+        <hint/>
+        <label>Operational Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_3d6ba29adb8a405046b9fb371d96194c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 05:37:51</sys_created_on>
+        <sys_id>ee556240db26049046b9fb371d96194f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Operational Status</sys_name>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_3d6ba29adb8a405046b9fb371d96194c_operational_status_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 05:37:51</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>

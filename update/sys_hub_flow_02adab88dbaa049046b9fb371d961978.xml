@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>test_flow</internal_name>
+        <label_cache>[{"name":"f9734f01-b9f4-4366-8842-75835b92266c.operational_status","label":"1➛Operational Status","reference_display":"Operational Status","type":"string","base_type":"string"},{"name":"f9734f01-b9f4-4366-8842-75835b92266c.errormessage","label":"1➛ErrorMessage","reference_display":"ErrorMessage","type":"string","base_type":"string"},{"name":"f9734f01-b9f4-4366-8842-75835b92266c.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice"}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>test flow</name>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 10:53:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>02adab88dbaa049046b9fb371d961978</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>test flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name>sys_hub_flow_02adab88dbaa049046b9fb371d961978</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-21 07:15:30</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=02adab88dbaa049046b9fb371d961978"/>
+    <sys_variable_value action="delete_multiple" query="document_key=02adab88dbaa049046b9fb371d961978"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=02adab88dbaa049046b9fb371d961978^sys_idNOT IN42adab88dbaa049046b9fb371d96197a"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>02adab88dbaa049046b9fb371d961978</id>
+        <name>test flow</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-20 10:53:46</sys_created_on>
+        <sys_id>42adab88dbaa049046b9fb371d96197a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-20 10:53:46</sys_updated_on>
+    </sys_flow_cat_variable_model>
+</record_update>

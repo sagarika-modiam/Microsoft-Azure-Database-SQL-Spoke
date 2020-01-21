@@ -15,25 +15,73 @@ AzureDatabaseSQLErrorHandling.prototype = {
     getErrorMessage: function(inputObj, respObj) {
         if (inputObj.Status != 200) {
             var respBody = new global.JSON().decode(inputObj['ResponseBody']);
-            respObj.errormessage = respBody.error.code;
-            //respObj.errorcode = respBody.error.code;
-            return respObj;
+            if (inputObj.Status == 404) {
+                respObj.errormessage = 'Either Subscription ID or Resource Group or Server or Database or API Version entered is invalid or not found.';
+                return respObj;
+
+            } else if (inputObj.Status == 400) {
+                respObj.errormessage = 'Either mismatch between properties or property values entered are invalid.';
+                return respObj;
+
+            } else if (inputObj.Status == 429 || inputObj.Status == 503) {
+                respObj.errormessage = 'Requests beyond max requests that can be processed by available resources.';
+                return respObj;
+
+            } else {
+                respObj.errormessage = 'Unknown Error';
+                return respObj;
+            }
+
+        }
+    },
+    getErrorMessageRename: function(inputObj, respObj) {
+        if (inputObj.Status != 200) {
+            var respBody = new global.JSON().decode(inputObj['ResponseBody']);
+            if (inputObj.Status == 404) {
+                respObj.errormessage = 'Either Subscription ID or Resource Group or Server or Database or API Version entered is invalid or not found.';
+                return respObj;
+
+            } else if (inputObj.Status == 400) {
+                respObj.errormessage = 'Either mismatch of Resource name or server name or database name in URL or database name exists.';
+                return respObj;
+
+            } else {
+                respObj.errormessage = 'Unknown Error';
+                return respObj;
+            }
+
         }
     },
     getErrorMessageUpdate: function(inputObj, respObj) {
         if (inputObj.Status != 200 || inputObj.Status != 202) {
             var respBody = new global.JSON().decode(inputObj['ResponseBody']);
-            respObj.errormessage = respBody.error.code;
-            //respObj.errorcode = respBody.error.code;
-            return respObj;
+            if (inputObj.Status == 404) {
+                respObj.errormessage = 'Either Subscription ID or Resource Group or Server or Database or API Version entered is invalid or not found.';
+                return respObj;
+            } else if (inputObj.Status == 400) {
+                respObj.errormessage = 'Either mismatch between properties or property values entered are invalid.';
+                return respObj;
+
+            } else {
+                respObj.errormessage = 'Unknown Error';
+                return respObj;
+            }
         }
     },
     getErrorMessageCreate: function(inputObj, respObj) {
         if (inputObj.Status != 200 || inputObj.Status != 202 || inputObj.Status != 201) {
             var respBody = new global.JSON().decode(inputObj['ResponseBody']);
-            respObj.errormessage = respBody.error.code;
-            //respObj.errorcode = respBody.error.code;
-            return respObj;
+            if (inputObj.Status == 404) {
+                respObj.errormessage = 'Either Subscription ID or Resource Group or Server or Database or API Version entered is invalid or not found.';
+                return respObj;
+            } else if (inputObj.Status == 400) {
+                respObj.errormessage = 'Either mismatch between properties or property values entered are invalid.';
+                return respObj;
+
+            } else {
+                respObj.errormessage = 'Unknown Error';
+                return respObj;
+            }
         }
     },
 
@@ -41,11 +89,20 @@ AzureDatabaseSQLErrorHandling.prototype = {
         var respBody = new global.JSON().decode(inputObj['responseBody']);
         if (inputObj.Status == 204) {
             respObj.errormessage = 'The specified database does not exist.';
+            return respObj;
+        } else if (inputObj.Status == 400) {
+            respObj.errormessage = 'Cannot drop database because it may be a sync metadata database or associated with job account or reserved database.';
+            return respObj;
+        } else if (inputObj.Status == 404) {
+            respObj.errormessage = 'Subscription ID or Resource Group or Server or Database entered is invalid';
+            return respObj;
+        } else if (inputObj.Status == 409) {
+            respObj.errormessage = 'Operation disabled or cancelled';
+            return respObj;
         } else {
-            respObj.errormessage = respBody.error.code;
-            //respObj.errorcode = respBody.error.code;
+            respObj.errormessage = 'Unknown Error';
+            return respObj;
         }
-        return respObj;
     },
 
     type: 'AzureDatabaseSQLErrorHandling'
@@ -54,13 +111,13 @@ AzureDatabaseSQLErrorHandling.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-12-09 08:24:32</sys_created_on>
         <sys_id>ef8e5e62dbe58c1046b9fb371d961991</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>AzureDatabaseSQLErrorHandling</sys_name>
         <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name>sys_script_include_ef8e5e62dbe58c1046b9fb371d961991</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-01-02 10:43:45</sys_updated_on>
+        <sys_updated_on>2020-01-08 06:14:45</sys_updated_on>
     </sys_script_include>
 </record_update>

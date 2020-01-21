@@ -7,7 +7,7 @@
         <auth_url>https://login.microsoftonline.com/a46df9b7-2c9b-49d5-8c9f-d1b3de4ba59f/oauth2/v2.0/authorize</auth_url>
         <certificate_url/>
         <client_id>36fc91ff-69ec-40c3-89fa-29cc691d9fe6</client_id>
-        <client_secret>xgtlDXxWToMtqjcTCID5MIU6xoi4hkCv3WaNTuwxZQp7MaSa+EyjGA==</client_secret>
+        <client_secret>yzLjN5c/c/5a/N1g2mc2Ta5VFTETSuu8MnPYV5+9p6d7MaSa+EyjGA==</client_secret>
         <client_uuid>6abaa28bdb91c01046b9fb371d961912</client_uuid>
         <code_challenge_method>S256</code_challenge_method>
         <comments/>
@@ -30,14 +30,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-11-28 10:26:25</sys_created_on>
         <sys_id>eabaa28bdb91c01046b9fb371d961912</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Azure_database</sys_name>
         <sys_package display_value="Microsoft Azure Database" source="x_snc_microsoft_az">2b991a03db9d80102ad2f7b51d9619f8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Microsoft Azure Database">2b991a03db9d80102ad2f7b51d9619f8</sys_scope>
         <sys_update_name>oauth_entity_eabaa28bdb91c01046b9fb371d961912</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-12-24 09:46:39</sys_updated_on>
+        <sys_updated_on>2020-01-21 05:33:23</sys_updated_on>
         <token_url>https://login.microsoftonline.com/a46df9b7-2c9b-49d5-8c9f-d1b3de4ba59f/oauth2/v2.0/token</token_url>
         <type>oauth_provider</type>
         <use_mutual_auth>false</use_mutual_auth>
